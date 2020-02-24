@@ -1,0 +1,9 @@
+These are a list of all the software that is required for this class.
+
+1. Windows 10
+This should be pre-installed on every laptop.
+
+2. Python 3
+
+
+

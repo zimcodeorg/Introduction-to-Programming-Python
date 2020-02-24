@@ -1,0 +1,1 @@
+Exercises for the students to work on in class. These are done to test understanding + application of a particular concept in class.

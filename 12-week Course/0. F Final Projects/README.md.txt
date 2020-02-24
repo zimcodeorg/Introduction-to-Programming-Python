@@ -1,0 +1,1 @@
+Final projects, to give students a chance to apply what they have learnt to solve one of many practical problems.
