@@ -1,9 +1,46 @@
-These are a list of all the software that is required for this class.
+These are all the software that is required for the Introduction to Programming: Python Course.
 
 1. Windows 10
-This should be pre-installed on every laptop.
+This should be pre-installed on every laptop. Contant Bukhosi if a laptop does not have an operating system.
 
-2. Python 3
+2. Google Chrome browser
+This should be pre-installed on every laptop. Contant Bukhosi if a laptop does not have Chrome.
+
+3. Microsoft Office
+This should be pre-installed on every laptop. Contant Bukhosi if a laptop does not have MS Office.
+
+4. Adobe Acrobat PDF Reader
+This should be pre-installed on every laptop. Contant Bukhosi if a laptop does not have Adobe.
+
+5. VLC Media Player
+This should be pre-installed on every laptop. Contant Bukhosi if a laptop does not have VLC.
+
+6. Python 3 (Windows 10 Version)
+
+To install Python 3, you will need an internet connection and about 150MB of free hard drive space.
+
+a. Go to python.org and open the Windows "Downloads" page.
+
+b. Click on "Lastest Python 3 Release - Python 3.x.y.".
+
+c. Scroll down to the Files portion and download: "Windows x86-64 executable installer".
+   Make sure that it says x64 in the description, because our laptops use the x64 system.
+
+d. After downloading the executable installer, run it.
+
+e. On the first page in the installation menu, make sure to CHECK the following:
+   [x] Add Python 3.x to PATH
+   DO NOT PROCEED WITHOUT CHECKING THIS OPTION.
+   Click "Install Now"
+
+f. On the last installation page, click "Disable Path Limit".
+
+g. Click "Close".
+
+This installation includes IDLE, a basic Python IDE. You can install other IDEs if you want to, but IDLE will
+be more than suitable for the course and is simple enough for beginners to understand.
+
+
 
 
 
