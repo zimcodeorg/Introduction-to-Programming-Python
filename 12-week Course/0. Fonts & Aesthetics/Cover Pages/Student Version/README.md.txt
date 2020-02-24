@@ -1,1 +1,0 @@
-Cover page for the Student version of the textbook.

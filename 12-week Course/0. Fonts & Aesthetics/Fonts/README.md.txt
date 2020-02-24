@@ -1,1 +1,0 @@
-A specification of the font types, weights and sizes to be used for the text, along with the font files themselves.

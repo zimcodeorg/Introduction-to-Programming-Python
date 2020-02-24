@@ -1,1 +1,0 @@
-Slide design templates for tutoring slides.
