@@ -1,0 +1,78 @@
+Lesson Structure (TBD hours, probably 2 hours)
+
+Suggested times are given, but this does not mean they should be stricly followed. It just means, for example, that if
+you follow along the text, concepts will usually add up to 15mins i.e. there can be 3 short concepts introduced 
+on one day each with lab portions between them. It's a guide meant to keep you on schedule.
+
+Each lesson plan has the following elements:
+
+Review (5min) – The tutor reviews the last lesson’s concept(s) that are going to be carried forward into the 
+new lecture.
+
+Concept (25min) – This is the general concept for the day. Multiple concepts may be introduced in
+one day. The concept is explained firstly at a very high level as in the text. An analogy is then used to
+show how the concept is applied or why it is important.
+
+An important part of this section of the class is the language used. A lot of concepts in this class will
+have names that are not familiar to the students e.g. abstraction, but the aim is not for the student to be 
+able to cough up a word for word definition. It is preferred that the student understands and can try to 
+explain the concept in some way that shows they understand, most importantly, in their code! Formal definitions 
+will be given anyway to satisfy students who would prefer them but unlike in their standard school curriculum, 
+they are not strictly enforced.
+
+Code demonstrations (35min) – This is where the tutor puts a concept into practice using a coded example. In 
+most cases, the class should follow along as well so that they practice, typing and debugging. We discourage just 
+showing the students prewritten examples as this does not allow them to analyse every step of the process. As stated 
+before, no assumptions should be made about the students, not even their ability to type! Multiple examples expressing 
+the same concept will be used to allow the students to notice similarities in blocks of code. Due to the cumulative 
+nature of the course, examples will often include as many of the concepts from past classes as possible for revision 
+purposes.
+
+Exercise (35min) – Every lesson will come with at least 1 exercise which either builds on the demonstration or revisits 
+the concept in some way. For this portion the students will work amongst themselves, with minimal help from the tutors 
+unless the problem appears too difficult. Help is suggested in the form of hints or alternative examples rather than the 
+actual solution. Each exercise will come with a standard goal that must be reached by at least 90% the students in the 
+class. If this goal is not met this should be taken as a sign that the class may not yet understand, or the problem is
+too difficult. For the quicker students, the exercises have other parts that explore how varying different things in the 
+code alter how it behaves as well as supplementary exercises.
+
+Applications (5min)– This is a very important section of the class that explains how the day’s concept is used in a real 
+example, or introduces a cool technology like Virtual Reality, Gaming, how social media sites work or news in the tech 
+industry. This is generally supposed to get students get excited about programming and help them realize the potential uses 
+of the concept they learned. 
+
+Recap (5min) - This is the last portion of the class which reviews the general concept learned during the day. The tutor
+can also talk about common mistakes and try to make sure there is as little confusion as possible.
+
+Homework (5min) - Often, it may be difficult to give coding homework as the students may not have access to computers or 
+be willing to install the software themselves. The homework given in this textbook is doable without a computer and instead is 
+used to let students get used to things like finding solutions to logic operations, identifying data types and debugging code 
+snippets. 
+
+Briefly discuss the scope of the homework, problems students might face and tips on how to get around them. Give the students time
+to quickly go through the assigned work and ask a few questions before they leave, so that they can work more efficiently. You can 
+have a WhatsApp Chat group dedicated to answering problems the students face at home while trying to complete it
+
+NB: If followed strictly, this adds up to 115mins. The 5mins is leeway for issues that might come up during the class. Tutor assistants
+should help the main tutor keep track of time.
+
+DURING THE LESSON
+
+Debugging - This is probably one of the more frustrating aspects of the course. Different computers can have different unexpected 
+problems that may or may not be easy to fix. For this we can only depend on the experience of the tutor for helping students debug 
+code, it’s important to help them learn from their mistakes and learn which types of error messages come from what kind of error. Take
+note of any recurring errors and share them with the other tutors to save time during lessons.
+
+
+Demonstrations - The text includes live demoes, some even using students to explain concepts. This is intended to make the classes 
+fun and help with visualization. There exist a lot of resources online that the tutor can look up online to add to the ones included.
+
+Conventions - At the beginning of every lesson plan, there is a box with things to revise which will be useful for the lesson. 
+Questions written in red are questions that the tutor should ask the class rather than giving the answer. Functions, variables and 
+keywords are written in bold.
+
+Terminology - Tutors encouraged to use any language or words that they think will help explain concepts to students. However, it is best only 
+to do this when explaining something for the first time and then using the proper terms as much as possible so that the students get 
+used to them and understand what they mean. This is because every programmer in the world, even the best, look up how to do things 
+online or in documentation which is written in standard language. It will thus be easier for students to learn by themselves and debug 
+if they know the right words.
