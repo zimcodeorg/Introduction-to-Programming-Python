@@ -1,6 +1,6 @@
-Lesson Structure (TBD hours, probably 2 hours)
+Lesson Structure (TBD 2 hours)
 
-Suggested times are given, but this does not mean they should be stricly followed. It just means, for example, that if
+Suggested times are given, but this does not mean they should be stricly followed. It just means that if
 you follow along the text, concepts will usually add up to 15mins i.e. there can be 3 short concepts introduced 
 on one day each with lab portions between them. It's a guide meant to keep you on schedule.
 
