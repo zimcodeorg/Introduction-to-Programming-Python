@@ -1,4 +1,5 @@
 Table of Contents
+
 Purpose of the textbook .................................................................................. 4
 Guidelines for the teacher ............................................................................... 4
 Lesson Plans (1hr 40min per lesson) ...................................................................... 5
@@ -59,129 +60,53 @@ Definition of a class ..........................................................
 Inheritance and Polymorphism .............................................................................. 124 
 
 
-Who is ZimCode?
+What is Zim Code?
 
-To be filled by Alvin
+Zim Code is a nonprofit coding school that was founded by Alvin Chitena in 2016. Our mission at Zim Code
+is to bringing coding to the forefront of youth education and empowerment in Zimbabwe. Code is the language of the 
+present and the future, and so we believe that it is necessary for everyone to have the opportunity to
+learn it. Zim Code is made of young and dedicated Zimbabweans from all walks of life who are passionate about coding, 
+education, entrepreneurship and philanthropy. 
+
+Given the vast socio-economic issues that plague Zimbabwe, we see it necessary to remove the many barriers that people
+may face when trying to learn how to code, namely quality information and resources. This course, the Introduction to 
+Programming: Python (12-weeks) is one of the many initiatives we are spearheading to further our mission.
+
+To find out more about Zim Code, visit our website: www.zimcode.org
+
 Purpose of the textbook
 
 This text is designed to cater specifically to high school students in Zimbabwe and other African
-countries whose education system is based on the GCE A level curriculum. The need for a
-programming textbook was clear during ZimCode’s inaugural programming classes. The idea is to
+countries whose education system is based on the GCE A level curriculum. The idea is to
 provide a low barrier text in writing that is easy to understand for African high school students with
-very little assumptions made about the background of the student. A wide range of relatable
-examples are used throughout the text to provide analogies and to help students grasp the abstract
-concepts in computer science and programming. This is done with the hope that students may begin
-to appreciate how computer scientists and software engineers solve problems and how these skills
-can be applied in the real world.
-In addition to learning the basics of coding, students will also inevitably learn and improve in other
-subject areas. The link between computer science and mathematics is undeniable and in fact
-fundamental. While it is easy to fall into the temptation of providing mostly computational and
-mathematical examples, we tried our best to include a wide range of examples appealing to all three
-major fields of science, commerce and humanities in every chapter.
-It is important for the teacher to go through the guidelines provided in this teaching guide as they
-give tips on how to get the most out of the text and examples.
+very little assumptions made about their background. 
 
-This course will give a 12-week introduction to programming in Python which is one of the most
-accessible languages to beginners due to its similarity to written English and white space delimiting.
-White space delimiting is the use of indentations and line breaks rather than brackets to group code
-blocks e.g. in a function/loop. Python is also a very powerful tool in computation (The numpy
-package is used in various fields for numerical computation) and web design (Instagram is written in
-Django/Flask, Python frameworks) with a very good support and development network. It is also
-easy to install and is often preinstalled on most operating systems. (Unfortunately not on Windows)
-An important part of this text is that it should be fun and interactive to the students. It involves a lot
-of live demoes. Examples are chosen from real world problems so that it becomes immediately
-apparent to the students how programming applies to real life.
-Students will also learn a lot of broader concepts in programming such as abstraction, functional
-programming, object oriented programming* and optimization.
+A wide range of relatable examples are used throughout the text to provide analogies and help students grasp the abstract
+concepts in Computer Science and Programming. This is done with the hope that students may begin to appreciate how Computer 
+Scientists and Software Engineers solve problems and how programming skills can be applied in the real world.
 
-Guidelines for the teacher
+In addition to learning the basics of coding, students will also inevitably learn and improve in other subject areas. The link 
+between Computer Science and Mathematics is undeniable and in fact, fundamental. While it is easy to fall into the temptation 
+of providing mostly computational and mathematical examples, we tried our best to include a wide range of examples appealing to 
+all three major fields of study: Science, Commerce and Humanities. It is important to go through the guidelines provided in this 
+teaching guide as they give tips on how to get the most out of the text and examples.
 
-This course is designed to be open, fun and interactive. We encourage deviating from the standard
-lecture model because the best way to learn programming is by actually doing it. The style will be a
-combination of lecture and lab type classes where a concept is introduced for a few minutes, the
-students get to use it and then reflection on the use of the concept will hopefully bring to light its
-value and clear any misconceptions. 
+This course will give a 12-week introduction to programming in Python which is one of the most accessible languages to beginners 
+due to its similarity to written English and white space delimiting. White space delimiting is the use of indentations and line 
+breaks rather than brackets to group code blocks e.g. in a function/loop. Python is also a very powerful tool in computation (The NumPy
+package is used in various fields for numerical computation) and web design (Instagram is written in Django/Flask, Python frameworks) 
+with a very good support and development network. It is also easy to install and is often preinstalled on most operating systems 
+(unfortunately, not on Windows).
 
-While we provide a detailed lesson plan, experimentation and flexibility is encouraged so that the
-most can be made out of every class. If something does not work particularly well, change it and if
-the teacher has better ways of teaching the class in their context, they should. We would like
-feedback on what worked and what didn’t, if you have any, email mgcini@zimcode.org
-Lesson Plans (1hr 40min per lesson)
-Suggested times are given, this does not mean concept should always take 15min, it just means if
-you follow along the text, concepts will usually add up to 15min i.e. there can be 3 short concepts
-introduced on one day each with lab portions between them.
-Each lesson plan has the following elements:
-Review (5min) – The teacher reviews the last lesson’s concept or concepts that are going to be
-carried forward into the new lecture.
+An important part of this text is that it should be fun and interactive to the students. It involves a lot of live demoes. Examples 
+are chosen from real world problems so that it becomes immediately apparent to the students how programming applies to real life.
+Students will also learn a lot of broader concepts in programming such as abstraction, functionalprogramming, object oriented programming* 
+and optimization.
 
-Concept (15min) – This is the general concept for the day. Multiple concepts may be introduced in
-one day. The concept is explained firstly at a very high level as in the text. An analogy is then used to
-show how the concept is applied or why it is important. A lot of this information is provided in the
-text. The teacher is encouraged to spend about 15-25min of the lesson on this portion of the class.
-An important part of this section of the class is the language used. A lot of concepts in this class will
-have names that are not familiar to the students e.g. abstraction, but the aim is not that the student
-should be able to cough up a word for word definition. It is preferred that the student understands
-and can try and explain the concept in some way that shows they understand, most importantly, in
-their code! Formal definitions will be given anyway to satisfy students who would prefer them but
-unlike in their standard school curriculum, are not enforced.
+This course is designed to be open, fun and interactive. We encourage deviating from the standard lecture model because the best way to 
+learn programming is by actually doing it. The style will be a combination of lecture and lab type classes where a concept is introduced for 
+a few minutes, the students get to use it and then reflection on the use of the concept will hopefully bring to light its value and clear any misconceptions. 
 
-Code demonstrations (35min) – This is where the teacher puts a concept into practice using a coded
-example. In most cases, the class should follow along as well so that they practice, typing and
-debugging. We discourage just showing the students prewritten examples as this does not allow
-them to analyse every step of the process. As stated before, no assumptions should be made about
-the students, not even their ability to type! Multiple examples expressing the same concept will be
-used to allow the students to notice similarities in blocks of code. Due to the cumulative nature of
-the course, examples will often include as many of the concepts from past classes as possible for
-revision purposes.
-
-Exercise (35min) – Every lesson will come with at least 1 exercise which either builds on the
-demonstration or revisits the concept in some way. For this portion the students will work amongst
-themselves, with minimal help from the tutors unless the problem appears too difficult. Help is
-suggested in the form of hints or alternative examples rather than the actual solution. Each exercise
-will come with a standard goal that must be reached by at least 90% the students in the class. If this
-goal is not met this should be taken as a sign that the class may not yet understand or the problem is
-too difficult. For the quicker students, the exercises have other parts that explore how varying
-different things in the code alter how it behaves as well as supplementary exercises.
-Applications (5min)– This is a very important section of the class that explains how the day’s
-concept is used in a real example, or introduces a cool technology like Virtual Reality, Gaming, how
-social media sites work or news in the tech industry. This is generally supposed to get students get
-excited about programming and help them realize the potential uses of the concept they learned. 
-
-Recap (5min) - This is the last portion of the class which reviews the general concept learned during
-the day. The teacher can also talk about common mistakes and try to make sure there is as little
-confusion as possible.
-
-Debugging
-
-This is probably one of the more frustrating aspects of the course. Different computers can have
-different unexpected problems that may or may not be easy to fix. For this we can only depend on
-the experience of the teacher. For helping students debug code, it’s important to help them learn
-from their mistakes and learn which types of error messages come from what kind of error.
-
-Homework
-
-Often times it may be difficult to give coding homework as the students may not have access to
-computers or be willing to install the software themselves. The homework given in this textbook is
-doable without a computer and instead is used to let students get used to things like finding
-solutions to logic operations, identifying data types and debugging code snippets.
-
-Demonstrations
-
-The text includes live demoes, some even using students to explain concepts. This is intended to
-make the classes fun and help with visualization. There exist a lot of resources online that the
-teacher can look up online to add to the ones included.
-
-Conventions
-
-At the beginning of every lesson plan, there is a box with things to revise which will be useful for the
-lesson. Questions written in red are questions that the teacher should ask the class rather than
-giving the answer. Functions, variables and keywords are written in bold.
-
-Terminology
-
-Teachers are encouraged to use any language or words that they think will help explain concepts to
-students. However, it is best only to do this when explaining something for the first time and then
-using the proper terms as much as possible so that the students get used to them and understand
-what they mean. This is because every programmer in the world, even the best, look up how to do
-things online or in documentation which is written in standard language. It will thus be easier for
-students to learn by themselves and debug if they know the right words.
+While we provide a detailed lesson plan, experimentation and flexibility is encouraged so that the most can be made from every class. 
+If something does not work particularly well, change it and if the teacher has better ways of teaching the class in their context, they should. 
+We would like feedback on what worked and what didn’t, if you have any, email mgcini@zimcode.org
