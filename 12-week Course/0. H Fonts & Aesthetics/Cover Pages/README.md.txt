@@ -1,1 +1,1 @@
-Cover pages for the Student & Tutor versions of the textbook.
+Cover page for the textbook.
