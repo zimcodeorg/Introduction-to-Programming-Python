@@ -2,8 +2,8 @@ Chapter 2 – Variables
 
 Abstraction
 
-So far we have just been considering things that an ordinary calculator can do with just a few simple
-additions. The first and probably the most powerful tool in programming is abstraction. Abstraction
+So far, we have only been considering things that an ordinary calculator can do with just a few simple
+operations. The first and probably the most powerful tool in programming is abstraction. Abstraction
 is the use of an idea rather than an event. This is best shown through examples.
 
 Example 2.1 – Using a formula
@@ -20,7 +20,7 @@ The answer is that we know the formula:
 
 distance = speed * time
 
-Now we can calculate any distance given any speed and any time. This is what we mean by
+Now, we can calculate any distance given any speed and any time. This is what we mean by
 abstraction. Rather than using an event (i.e. exact numbers) we use an idea (i.e. a formula).
 
 Supplementary Exercise 2.1 (Science) – Making a complicated calculation easy
@@ -76,7 +76,7 @@ to numbers to x and y because x and y actually represent the numbers in the calc
 Demonstration: Let’s be variables!
 
 This is a good chance to learn everyone’s name. Everyone in the class will be a variable called by
-their name, there will be someone who is an operator and the teacher will be the interpreter
+their name, there will be someone who is an operator and the tutor will be the interpreter
 (Python). Each person will get a piece of paper (this is the “memory”) with a number on it whenever
 they are ‘declared’ as a variable. Here are the rules:
 
