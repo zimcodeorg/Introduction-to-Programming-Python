@@ -1,0 +1,345 @@
+Chapter 3 – Data Types
+
+Something that you may have learned in school is something like “data is information”. This is	
+basically true and there are lots of different things you can do with data. For example, you can write
+words with letters, you can add together numbers, etc. A computer only understands ones and
+zeroes; this is how it stores all its data but this is useless to us because we cannot read it. Instead we
+want to store numbers like 7 or words like “Python”.
+
+We now have a problem because we have many different data types and we want to do different things (operations) on them. For example, try the following code:
+
+>>> 5 + ‘Python’
+
+This is your typical example of trying to add oranges to donkeys. It does not and should not work. This is because “5” and “Python” are different data types. Why do we need different data types? Different data types serve different purposes and thus have different operations.
+
+Integers
+
+What is an integer? You might remember what these are from form 1/2 mathematics. Integers are whole numbers with a + or – sign (e.g. 1, 5, -7, 345, 0, -111111). What examples can you give? Python refers to an integer in short as int. Let’s do some operations on integers, you have done
+some of these before:
+
+1 >>> 2 + 345
+2 >>> 34 – 54
+3 >>> 56//3
+4 >>> type(12) #Check the type of some data
+5 >>> x = 15
+6 >>> type(x)
+
+The sixth and fourth line uses a type() function to check the type of some kind of data. We will go into more detail about functions in the next chapter. This works the same way as the input and print functions we used earlier. Notice that if you put something inside the brackets, it tells you what type it is.
+
+Toolbox 3.1: Integers
+1. Mathematical operations (+, -, *, /, //, %, ** etc.)
+2. type()
+
+Exercise 3.1: Spot the integer
+
+Which of the following numbers are integers? Even if you think the answers are obvious, use the type() function in the shell to check.
+
+i) 2 ii) 7*9 iii) 8/3-2 iv) 12*4/(3-2)+5 v) 34//7
+
+Supplementary Exercise 3.1: How to cast an integer
+
+Look at Toolbox 2.1. Which of those operations can give you an answer, which is not an integer. What kind of numbers do they give you?
+
+Floating Point Numbers
+
+So we have looked at integers but is it possible to calculations with just integers? No. We need to have some way to represent fractions and decimals like ½ or 0.3 or π. This is done using what are called floating point numbers. Python refers to a floating point number as a float. They are always represented as decimals, there is no built in way to have an output as ½, it will always be 0.5. The decimal point is always the fullstop/period. Let’s do some examples:
+
+1 >>> 0.4 + 0.4
+2 >>> -2/3 #See footnote^(1)
+3 >>> x = 0.5
+4 >>> x * 4 #Line 4
+5 >>> type(0.3)
+6 >>> type(0)
+7 >>> type(0.0)
+8 >>> type(2/3)
+
+
+Notice a few very important things:
+
+Line 2 and 8: Dividing two integers and getting a fraction gives you a float.
+Line 4: Calculations involving a float always gives the answer as a float
+Line 7: Even if it’s an integer to us, if it has a period(.), it will always be considered a float
+
+Type casting
+
+Try the following code:
+
+1 >>> int(2.3)
+2 >>> int(37.42)
+3 >>> float(3)
+
+Notice how we can change integers to floats and floats to integers using the float() and int() functions. This is very useful if you want to be sure your answer is of a certain type^(2).
+
+Exercise 3.2: Do integers float?
+
+a) What type are the following numbers, you can use the type() function:
+i) 45 ii) 45/2 iii) math. pi ∗ 4 ∗∗2 iv) math.sqrt(4)
+***Don’t forget to import math first!***
+
+b) i) Declare a variable x as your favourite integer.
+ii) Check the type of x.
+iii) Declare a variable y as x+1/3.0. What is its type?
+iv) Convert x into a float and check its type.
+____________________________________________________________________________
+1 In older versions of Python, this would give you zero because they swapped division (/) and floor division (//)
+2 In fact, most other programming languages do not allow you to declare a variable without specifying the
+exact type it is going to be. Python allows your variable to store anything, this is called “dynamic typing”
+____________________________________________________________________________
+
+Strings
+
+A string is the data type used by Python to represent text/characters. A character is simply any letter of the alphabet or any symbol or any punctuation including a space. This has to be different from variables. Strings are represented by putting them in quotation marks e.g. ‘Hello World’ or “Python”. Strings in Python are represented as str. Let’s practice making strings:
+
+>>> ‘This is a string’
+>>> “This is also a string”
+>>> This is not a string          #Why is it not a string?
+>>> ‘3’
+>>> “ERROR!                       #Why is this an error?
+>>> ‘ ’
+>>> ‘~’
+>>> my_str = “Hello World”
+>>> print(my_str)
+>>> ‘Hello’ + ‘ ’ + ‘World’
+>>> ‘3 + 5 = ‘ + 8 #Why is this an error?
+>>> first_str = ‘Python is’
+>>> second_str = ‘AWESOME!’
+>>> print(first_str, second_str)
+
+There are a lot of things we can do with strings, a lot of which we will just mention because you can do all of them in the same way. We will go down the list of the most important things we can do.
+
+Concatenation
+
+Concatenation is when you join two or more strings. This is done using a + in exactly the same way you would add integers but you have to be careful that you are adding two strings together, not a string and some other data type. Let’s do some examples:
+
+>>> ‘Hello’ + ‘ ’ + ‘World’
+>>> ‘3 + 5 = ‘ + 8 #Why is this an error?
+>>> first_str = ‘Python is’
+>>> second_str = ‘AWESOME!’
+>>> print(first_str, second_str)
+
+Notice that a space is also a character. When using the print function, you can put all the strings that you want to concatenate inside the parentheses (round brackets) and it will automatically concatenate the strings and add spaces between them.
+
+Functions on strings
+len() – This returns the number of characters in a string as an integer
+str() – This is used to type cast a different type into a string
+
+>>> len(‘Hello’)
+>>> s = ‘We are learning data types’
+>>> len(s)
+>>> e = 2.71
+>>> type(x)
+>>> str(e)
+>>> type(e)
+
+Indexing
+
+This is a very important concept in programming used to give the position of something inside a large ordered data structure i.e. something that is organized beforehand. An index is the position of an object among other objects e.g. the position of the character ‘h’ in the string ‘hello world’.
+Counting in Python always starts from 0, this is often very annoying for beginners then you will meet languages that start from 1 and you will be even more annoyed. Consider the string ‘hello’:
+
+Character H e L l o
+Position  0 1 2 3 4
+
+In our code, we use square brackets [] (no space) to show that we are indexing as shown below:
+
+>>> ‘Hello’[0]
+>>> ‘Hello’[1]
+>>> s = ‘Python’
+>>> s[3]
+>>> s[6] #Why is this an error?
+>>> s[-1] #You can start counting backwards from -1
+>>> s[-2]
+>>> s[len(s)] #Why is this an error?
+>>> s[len(s) – 1]
+
+We can do a few more complicated things like indexing a group of characters at once using a “:” (colon) as shown below:
+
+>>> w = ‘strings’
+>>> w[0:2] #Gives the characters from position 0 to 1
+>>> w[:2] #If you leave out the zero it starts from zero
+>>> w[2:4]
+>>> w[3:-1]
+>>> w[4:7] #Why is this an error?
+>>> w[:] #this is how you copy the entire string(^3)
+
+If you add a second colon, you can change the order by using a ‘-1’ to reverse the order.
+
+____________________________________________________________________________
+3 Copying is different from assigning a new variable to the old one because the new value stored in a new lace
+in memory.
+____________________________________________________________________________
+
+>>> t = ‘abcde’
+>>> t[:2:-1]
+>>> r = ‘racecar’
+>>> r[2::-1]
+>>> r[::-1] #This is called a palindrome, it looks the same even if you              reverse it
+
+String methods
+
+These are functions that allow you to make a modified copy of a string. This is always just a copy, if you want to use it, you have to make sure you store it in a new variable or you replace the old variable. Notice how a method is used, you give your string, add a “.” then put the name of the
+function (no spaces). Never forget the parentheses! (brackets). We will show you how to use a few then give a list and what they do in the toolbox.
+
+>>> ‘Hello’.upper() #Give me text to capital letters(upper case)
+>>> s = ‘ELEPHANT’
+>>> s.lower() #Give me text in lower case (small letters)
+>>> print(s) #s is still the same
+>>> s = s.lower() #s is now updated so that it is in lower case
+>>> s.islower() #Returns True if all the letters are lower
+case, False otherwise
+>>> s.index (‘e’) #Gives first position of ‘e’
+>>> s.index(‘h’)
+>>> s.count(‘e’) #Gives the number of occurrences of ‘e’
+
+To get a full list of all the methods you can use on strings you can go to the python documentation. You can go to the shell and execute help(str). If you find it difficult to read, in IDLE you can go to Help > Python Docs > The Python Standard Library > Built-in Types > Text Sequence Type –str > String Methods. I encourage you to look at the documentation.
+
+Toolbox 3.2: Strings
+
+1. Concatenation
+2. Indexing
+3. len()
+4. str()
+5. If you have declared a string in a variable called s, you can use these methods:
+a. s.upper()
+b. s.lower()
+c. s.isupper()
+d. s.islower()
+e. s.index(character)
+f. s.count(character)
+Boolean types
+
+To help you make decisions you often need one of two answers, “yes” or “no”. This allows you to know when to do something and when not to do something. Similarly, a computer must have something that works the same to know if the answer to some question is “yes” or “no”. What are other pairs of words that mean “yes” or “no”? Python has a special data type that only takes 2 values, True or False. A boolean type can never be any other value, only those two. Notice that in Python, the first letter of True and False must be in upper case (capital letters).
+
+>>> True
+>>> False
+>>> type(True)
+>>> type(true) #Why is this an error?
+
+Boolean types are usually an answer to a question for example; Do you want to learn how to code? Yes! So a computer needs a way to ask questions and find answers on its own otherwise it can’t do smart things. To ask questions a computer uses certain operators listed below:
+
+Toolbox 3.3: Comparison Operators
+> greater than
+< less than
+== is equal to
+!= is not equal to
+>= is greater than or equal to
+<= is less than or equal to
+
+Let’s use these below:
+
+>>> 3 > 5
+>>> 3.5 < 5
+>>> 3 == 3
+>>> 3 > ‘seven’ #Why is this an error?
+>>> 2.7 < 1
+>>> ‘h’ == ‘H’ #Why do you get the answer that you get here?
+>>> 2 >= 2
+>>> 2 != 2
+>>> 5 > max(4,5,6)
+>>> 5 <= min(7,8,9)
+>>> ‘yes’ == ‘yes’
+>>> True == True
+>>> False == True
+>>> 2 >= 3
+>>> import math
+>>> math.pi <= 2
+>>> math.pi == 3.14159326
+>>> 2.0 == 2.0
+>>> 17 != ‘seventeen’
+
+Exercise 3.3: True or False?
+
+Write down the answers to these comparison tests and then check if you were correct using the Python Shell.
+i) 789 > 789.1 ii) 3 != min(3,4) iii) int(3.4) == 3 iv) (9//4) >= (12%5) v) str(3) != ‘three’
+
+Toolbox 3.4 Logical operators and chaining comparison tests
+Let’s add a few more things to our toolbox. What if we want to check many things for example, I will only go to school if all the following things are True:
+
+and: If I have my books and if it is not raining – if I don’t have my books I won’t go even if it’s not raining, if it’s not raining I won’t go even if I have my books.
+
+or: If I have my books or if it is not raining – if I have my books I will go even if it is raining. If it is not raining I will go even if I do not have my books.
+
+in: Used to check if a shorter string is in a longer string^(4)
+not: This takes the opposite of whatever you put in front of it e.g. not 1>3 is True
+
+Let’s do some examples:
+
+>>> 2 < 3 and 3 < 4
+>>> 3 == 4 or 3 == 3
+>>> ‘h’ in ‘hello’
+>>> 2 != 7 and 12 <= 45
+>>> 2 < (0 or 3)
+>>> not True
+>>> (3 < 4 and int(‘three’) == 3) or 12 == 7
+>>> 2 or 3 #Why does this not make sense?
+>>> 3 or 2 #Why does this not make sense?
+
+Exercise 3.4: Is it and and or or and or or?
+
+a) Evaluate the following tests manually and then confirm them in a shell
+i) 4 != (3 or 4) ii) ‘3’ == str(3.0) ii) 347 > 5*45 iv) 5 > len(‘Python’) v) ‘te’ in ‘tea’
+b) The function random.random() gives a random float between 0 and 1. Simply use it the same
+way you would use max/min but make sure the brackets (parentheses) are empty.
+i) Import the library random. The same way we did with math in Chapter 2
+ii) Test the function random.random() by typing it into the shell
+iii) Declare three variables x, y and z as random numbers between 0 and 1
+iv) Use the comparison operators (>, < and ==) to find out which one is the biggest and smallest
+number.
+v) Confirm your answer using the max/min function
+
+Variables and Data Types
+
+We now understand what are called the four primitive data types in Python. These are the most basic ways to store data in a high level programming language. So far we have not been strict about what our variables store, we have just bee assigning values to variables but as a program becomes
+more and more complex we have to know which data types we store in our variables.
+
+Consider the following script and explain why it does not work:
+
+x = 3
+y = ‘3’
+print(x + y) #Why is this an error?
+
+This is going to be the source of many bugs in your code so it’s important to remember to check your data types. The most useful tool in your scripts is to use the print() and type() functions as in the example:
+
+X = 74
+Y = ‘22’
+print(type(Y)) #Tells you what type Y is
+
+You can even do this in the shell after running because Python stores all the declared variables
+before the error.
+____________________________________________________________________________
+4 This more generally checks if an object is inside a data structure. We will see this in chapter 8
+____________________________________________________________________________
+
+A common source of this error is when using the input() function. The input function always returns (gives you) a string so if you want to do calculations with the input value you have to type cast it into
+a number. Write the following code to understand the source of the error.
+
+Wrong Code:
+
+x = input('Enter a number: ')
+y = 5
+print(x*y)
+
+Correct code:
+
+x = input(‘Enter a number: ‘)
+x = int(x) #convert the str to an int
+y = 5
+print(x*y)
+
+Exercise 3.5: Hosting a lit Python party
+
+a) You are planning to host a coding party and you want to sell the tickets for $10 each. Because you are so excited, you want to calculate how much money you are going to make based on how many people are going to come to your party. Write a script that does the following things:
+i) Ask the user how many people are coming to the party and store it in a variable (Remember to
+name this variable so that it is easy to understand what it stands for and what type it should be).
+ii) Declare a variable called price and set it to 10
+iii) Make Python print out how much money you are going to make, make sure there is some text
+so that you understand what the output is, not just a number.
+b) You make a killing from your first coding party and decide this is what you want to do for a living.
+So now you want to improve your program so that it works for all the different prices. Change
+one line in your code so that it asks the user how much he is going to charge for the party. This is
+a beautiful example of abstraction, because we used a variable to abstract a calculation for a
+specific situation, we only have to change one line in our code to make it work for all situations.
+c) [Supplementary] You want to make your program a bit nicer. Implement (add) as many of the
+following features as you can:
+i) Make it greet the user first e.g. with “Hello, Party Host”
+ii) Make it ask how many parties there are going to be and add another output that tells you how
+much you are going to make from all the parties.
