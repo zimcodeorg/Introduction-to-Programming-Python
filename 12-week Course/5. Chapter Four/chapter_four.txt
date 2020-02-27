@@ -34,7 +34,7 @@ def function_name(parameters):
     #Function code/statements
     return value
 
-All these things in bold must always be there when defining a function. Here is a checklist for writing functions:
+All the things in bold must always be there when defining a function. Here is a checklist for writing functions:
  def is a Python keyword like import, it tells Python that you are about to define a function. As with other keywords it should never be used as a variable name.
  function_name can be replaced by anything that you want to name your function. The rules for naming a function are the same as for variables but we never really use upper case letters as this might confuse some readers.
  The parentheses () must always be included, this is where we put the parameters, which are usually variables. If the function does not need any parameter, we leave them empty but they should always be there.
@@ -95,7 +95,6 @@ Let’s write a few more functions as practice to show that functions are not ma
 letter. This might be useful for example if you want Python to write someone’s name properly. First let’s do this without a function:
 
 name = “ben”
-name = name.lower()
 name = name.capitalize()
 print(name)
 
@@ -109,7 +108,6 @@ Imagine if you had to do this 10 times in your code i.e. you had to declare 10 v
 If you see yourself doing this, it’s a sign that you should use a function. Let’s do it below:
 
 def cap_name(name):
-    name = name.lower()
     name = name.capitalize()
     print(name)
 
