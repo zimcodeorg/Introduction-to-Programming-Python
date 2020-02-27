@@ -1,67 +1,19 @@
 Chapter 1 – Introduction to Python
 
-1.1 Introduction to Computers. 
+Teacher’s Note: Lesson 1-2
 
-A computer is a { INTRODUCTORY EXPLANATORY CONTENT - 1 paragraph }. 
-
-The computer system is made up of three things:
-
-1. Input – this is the information that a computer gets from outside, it will never act on its
-own e.g. when you type you are giving an input of character. Things like keyboards, mice
-and touchscreens are called input devices
-
-2. Processing – These are the instructions and calculations that the computer must follow
-to do something with the input. For all the devices you use, you are used to being 
-involved with the input and output part. In programming, you get to directly deal with
-the processing part of a computer.
-
-3. Output – This is what the computer gives out e.g. the picture on your screen, a sound or
-turning off the lights.
-
-(Figure 1) Picture of the Computer Model: {a}
-
-{ EXERCISE - Name different types of computers AND input, processing, output devices }
-
-1.2 Operating System
-
-An operating system is a { INTRODUCTORY EXPLANATORY CONTENT - 1 paragraph }. 
-
-Examples of Operating Systems are: Windows 10, MAC-OS, LINUX etc. Operating Systems are constantly being
-updated to work more efficiently and cater to new demands.
-
-(Figure 2) Icons from various operating systems: {null}
-
-One of the crucial things an OS does is to organize our files and folders: documents, movies, pictures, etc.
-{Brief explanation of a filesystem}
-
-{EXERCISE - Something about operating systems }
-
-1.3 The Command Line and the Graphic User Interface (GUI)
-
-A Graphic User Interface (GUI) is { INTRODUCTORY EXPLANATORY CONTENT - 1 paragraph }. Before we had the GUI, we had the command line.
-{ example of one of the first OS that ran on a CMD, e.g DOS }
-
-We still have the Command Line in modern computers because it helps us complete certain tasks quickly and more concisely.
-Here are examples of things you can do through the command line:
-{ List of things achievable through command line }.
-
-{ CODE DEMONSTRATION: 
-  Fundamental CMD commands + arithmetic in CMD demo }
-
-{ EXERCISES:
-  Can only be complete using CMD only e.g creating a file, moving it, deleting etc }
-
-{ RECAP:
-  Linking commands in the CMD to programming, briefly, then recap }
-
-1.4 Introduction to Programming
-
+These are short lessons to someone who is experienced using a computer but for those who are not,
+it can be quite a jump. The aim of the first two lessons, is to emphasize the ideas on how a basic
+computer works, things like file systems and command which are available on the lecture slides are
+not given in this book because we believe these things have to be taught in person and a student will
+have a difficult time self-studying them. As stated before, this text book is useful to students who
+have taken a term of high school computer classes or have used a computer for more than a month
+elsewhere.
 
 Programming is writing down a set of instructions for the computer to follow. How do you give
 instructions to someone? You have to communicate using a language. There are many programming
 languages that exist, we are going to teach you Python. Python is called a high level interpreted
 language. We will explain what this means a bit later.
-
 Computers “think” only in ones and zeroes yet they are capable of doing so many things. How is this
 possible? A computer is basically a calculator, all it actually does is calculations and from these
 calculations, you can do more complicated things. So if a computer only understands ones and
@@ -75,46 +27,48 @@ the order that you write them then if it gets to an error it crashes. If you giv
 i) Go outside
 ii) Jump to the moon
 Python will go outside and then it will realise that it can’t jump to the moon and give you an error.
-
 The opposite of an interpreted language is a compiled language. A compiled language first checks to
 make sure there are no errors before it runs. So if you gave it the two instructions above it will not
 even go outside, it will immediately tell you that it cannot jump to the moon.
-
 Unfortunately, computers are not very clever, in fact a computer is a very stupid machine that
 blindly follows any instructions you give it. It will always try to do whatever you tell it to do. It also
 follows its language very strictly, if you put a small (lower case) letter where there is supposed to be
 a capital (upper case) letter, it will be completely confused and give you an error. You will see this as
 we go along because you will definitely have lots of errors.
+The Computer Model
+A computer is a system made up of three things:
+1. Input – this is the information that a computer gets from outside, it will never act on its
+own e.g. when you type you are giving an input of character. Things like keyboards, mice
+and touchscreens are called input devices
+2. Processing – These are the instructions and calculations that the computer must follow
+to do something with the input. For all the devices you use, you are used to being 
 
+involved with the input and output part. In programming, you get to directly deal with
+the processing part of a computer.
+3. Output – This is what the computer gives out e.g. the picture on your screen, a sound or
+turning off the lights.
 
-1.5 Python
+Figure 1 Here is a picture of Python Code: {a}
 
+Why Python?
 We choose to teach Python because it is a relatively simple yet extremely powerful programming
 language to understand. Some examples of apps/websites written in Python are Instagram,
 Pinterest, Parts of Google and most of YouTube and many more. The most important reason is that
 because it is simple, it will allow you to learn the core concepts in programming which allow you to
 learn other languages much faster.
-
 The IDE
-
-Let’s write some code! After following the instructions on how to install Python 3, open the program
+ Let’s write some code! After following the instructions on how to install Python 3, open the program
 IDLE that was installed with Python. IDLE is called an IDE which stands for Integrated Development
 Environment. It is the software that we will be using to write and run most of our code in this course.
 Your screen should look like this:
 
-(Figure 2) Here is a picture of the IDE: {b}
+Figure 2 Here is a picture of Python Code: {b}
 
+Figure 2
 This is called the Python Shell, let’s write our first line of code, inside the shell, type in the following
 then press enter.
-
-Python 3.5.1 (v3.5.1:37a07cee5969, Dec 6 2015, 01:38:48) [MSC
-v.1900 32 bit (Intel)] on win32
-Type "copyright", "credits" or "license()" for more information.
->>>print(‘Hello World’) 
-
 You have written your first line of code! It tells Python to output/print the words “Hello World”.
 Notice how you typed in an input, the computer processed that input and it gave you an output.
-
 Exercise 1.1: Say my name
 a) Change the words inside the quotation marks so that it say “Hello” and followed by your name.
 Do not remove or add anything else! You have learned your first piece of code using the print()
@@ -122,9 +76,12 @@ function.
 Earlier we said a computer is a calculator, let’s use the computer as a calculator. Execute the
 following code and see if it gives you the right answer. Do not include the things that come after the
 “#” symbol.
+Python 3.5.1 (v3.5.1:37a07cee5969, Dec 6 2015, 01:38:48) [MSC
+v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>>print(‘Hello World’) 
 
-1.6 Python for calculations
-(Figure 3) Here is a picture of arithmetic done in the Python IDE: {c}
+Figure 3 Here is a picture of Python Code: {c}
 
 Exercise 1.2: Back to first grade
 a) Use the symbols you used above to try and do more calculations
@@ -133,18 +90,15 @@ What do you think the “//” symbol does? This is called floor division, it gi
 from when you divide two numbers. E.g. 5//3 is 1 remainder 2 but the floor division operator only
 gives you the whole number part which is 1.
 Now execute this code and try and figure out what it does.
-
 >>> 3%2
 >>> 3%3
 >>> 3%4
 >>> 3%7
-
 The “%” symbol is called the “mod operator”, it gives you the remainder after division.
 Let’s make our calculations a bit more complicated. The rules of BODMAS (Brackets, pOwers,
 Division, Multiplication, Addition, Subtraction) that you learned in primary school work here just like
 for your calculator. Decimals in Python use a full stop which is usually called a period (.), not a
 comma (,).
-
 >>> (23//5)*7/(12%5)+5 #19.0
 >>> ((67%5)*(-4*-0.5))**0.5 #2.0
 >>> 3//2
@@ -152,8 +106,8 @@ comma (,).
 >>> 3//4
 >>> 3//7 
 
-Notice that even when you are multiplying things in brackets, you have to put the * operator!
 
+Notice that even when you are multiplying things in brackets, you have to put the * operator!
 Exercise 1.3: BODMAS
 a) Do the following calculation by head and then confirm it on the shell
 Max/Min
@@ -165,7 +119,14 @@ This is called importing the math module, we will be importing many more modules
 how it’s done.
 To use the more advanced calculations, we always have to execute the code above. Let’s see what
 we can do.
-
+Remember that this will not work if you do not import the math module!
+Exercise 1.4: Scientific calculator
+a) Close IDLE and open it again.
+b) Calculate the area of a circle of radius 2 using math.pi
+c) Copy the answer and round it off to the nearest unit using round()
+So far you have been typing in commands one by one and executing them, but what if you are
+writing some really complicated code like a music player. It would be disaster if it executed your
+code right after you’ve typed it, it’s like writing a composition with an examiner who marks after
 >>> 2(2) #Why is this an error?
 >>> 2*(2)
 >>> 17//7 + 23%3 + 3**2
@@ -183,17 +144,6 @@ we can do.
 >>> math.cos(math.pi) #Find cos(π) or cosine of pi
 >>> math.log10(100) #Find log(100) to base 10 
 
-Remember that this will not work if you do not import the math module!
-
-Exercise 1.4: Scientific calculator
-a) Close IDLE and open it again.
-b) Calculate the area of a circle of radius 2 using math.pi
-c) Copy the answer and round it off to the nearest unit using round()
-So far you have been typing in commands one by one and executing them, but what if you are
-writing some really complicated code like a music player. It would be disaster if it executed your
-code right after you’ve typed it, it’s like writing a composition with an examiner who marks after
-
-
 every sentence. You want to first write out parts of your code, test them and then write more and if
 you need to change anything, you can go back.
 In Python, you can write code using a script which allows you to write a lot of code at once. In IDLE,
@@ -207,7 +157,6 @@ print(“Hi”, name)
 This code asks you to type in your name and then when you press enter, it greets you. When you run
 a script, it never prints anything unless you use the print() function unlike the shell where if you type
 in a calculation, it immediately gives you an output.
-
 Ex 1.5: So many questions
 a) Change the words in green (the ones inside the quotation marks only so that it asks you
 different things and gives you different answer e.g. asking for your age then make it pring “You
