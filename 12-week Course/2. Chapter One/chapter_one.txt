@@ -45,7 +45,7 @@ A GUI (graphical user interface) is a system of interactive visual components fo
 files stored on a computer in a human-readable format. For examples, if you want to open the Movies folder to watch
 your favorite action film stored inside, all you do is move the mouse cursor over the Movies folder and click on it. 
 
-Before we had the  GUI, we had the command line. Back then, if you wanted to watch your favorite film, you had to do so by 
+Before we had the GUI, we had the command line. Back then, if you wanted to watch your favorite film, you had to do so by 
 entering a command in the command line. Generally, your command has to specify the following, using memorized keywords:
 
 1. The application you are using to perform the action.
@@ -58,7 +58,7 @@ Player, I would have to type this in the command line to watch it:
 
 C:\WINDOWS\system32> start vlc "C:\Users\achitena\Downloads\Mad Max Fury Road (2015)\Mad.Max.Fury.Road.2015.mp4"
 
-Imagine having to do this everytime when you want do anything on a computer? Well, before the invention of the GUI, that is
+Imagine having to do this every time you want do anything on a computer? Well, before the invention of the GUI, that is
 how people generally did things. An example of an early operating system that used this system is MS-DOS, which stands for 
 Microsoft Disk Operating System
 
@@ -75,7 +75,7 @@ Here are some examples of things you can do through the command line:
 
 Here are some basic command line commands:
 
-help - line lists all the basic builtin commands at your disposal.
+help - line lists all the basic built-in commands at your disposal.
 dir - list all the contents inside the current directory
 cd - change directory
 mkdir - make a new directory
