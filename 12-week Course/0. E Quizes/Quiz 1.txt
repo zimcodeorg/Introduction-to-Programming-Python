@@ -1,0 +1,186 @@
+Name:						 
+Group:
+Computer Number: 				
+
+Quiz 1 (1hr 45 minutes) [Exam Total: 46 marks]
+
+Do not panic! We are using this test to see how you guys are doing. It’s not a midyear or exam. You are allowed to use notes and ask for hints for some of the questions. Please read all instructions carefully before attempting questions. Remember to write you name, group and computer number at the top.
+
+Part A: Short Questions [Total: 30 marks]
+
+You are advised to spend x minutes on this section.
+
+Answer these questions on the question paper in the spaces provided. You are not allowed to use a computer for Part A. You must only have your question paper, pens/pencils and notes. When you finish Part A, hand in your question paper before starting on Part B.
+
+Boolean (True/False) Questions [5 marks] {ET: 4mins}
+	2 different files can have the same file path on the same hard drive. [1]
+	Python is the only programming language. [1]
+	A script is used to write short commands while the shell is used to write longer programs. [1]
+	You must always import the math module before you use it. [1]
+	A function can have no parameters. [1]
+{
+
+ Multiple Choice [5 marks] {ET: 4mins}
+
+	Which of the following rules (as many as you want) must you follow when naming variables?
+	The variable name cannot start with a number.
+	The variable name cannot have uppercase characters
+	The variable name should not be the same as that of a python keyword
+	The variable name can have spaces
+	The variable name can have any punctuation
+
+ For 5 marks, we should replace this question with 5 or so questions with 5 answers and only one correction answer each.
+  We can cover more ground while testing their ability to eliminate incorrect answers or recall correct ones. I suggest:
+  Q1: Variable naming (can modify the question above) [1]
+  Q2: Command line (what does a certain command do) [1]
+  Q3: File System (difference between a file and a folder) [1]
+  Q4: What does the following code block do? (return concept) [1]
+  Q5: What does the following code block do? function calling concept) [1] 
+}
+
+Short Answer Questions [20 marks]
+
+For each of the values below, write down their type in the space given. If it is not a valid type, write ERROR. [7] {ET: 4mins}
+
+4567	
+“345”	
+324.423	
+5 >= 4	
+“Hello”	
+true	
+None	
+
+Evaluate the following Boolean expressions and write down the result in the space given. If it is not a valid
+expression, write ERROR. [7] {ET: 4mins}
+
+65 < 102	
+12 = 12	
+“haha” != “kkkk”	
+1 or 0	
+( 3 == 7//4 ) and ( 3.4 is not 3 )	
+True and False	
+‘t’ in ‘Time’	
+
+Identify the error in the following code blocks and debug (fix) it. Feel free to re-write the code inside the block. [5] {ET: 6mins}
+
+{ The code blocks should be separate blocs so that students don't think it's all one code block }
+
+#1
+Print(“Hello World”)									
+
+#2
+num = input(“Enter a number”)
+print(num + 7)
+
+#3 
+print(“123” + 456)
+
+#4
+def myfunc(x):
+return x + 2
+
+#5
+s = “py”
+y = s[2]
+
+
+Why does this not print anything in the script? [1] 
+{ This should be separate from the other five, since it has its own question }
+
+def hello():
+	print(“Hello”)
+
+
+Part B: Coding Questions [Total: 16 marks] 
+
+You are advised to spend y minutes on this section.
+
+Make sure you have submitted your answers to Part A before starting on this section.
+
+For the following questions you are allowed to use a script/shell on a computer to test your code. Make sure to write the answers in 
+the spaces given below.
+
+Shell Questions [4 marks]
+
+Evaluate the expressions below using the shell and write down the answer in the space given. Some of them are not written in Python math! [4] {ET: 4 mins}
+4(3.4)(7.8)(9.9)	
+sin⁡〖(31)〗	
+17234 mod 332	
+(2*3%4)*((1.4//0.4) + (15 - 3))	
+
+Short Script Problems [4 marks]
+
+Define a function called add2(x,y) that adds 2 numbers x and y and returns the result. [2] {ET: 3mins}
+
+def add2(x,y):
+	’’’
+	Adds two numbers
+	x -> float
+	y -> float
+	returns float
+	’’’
+
+
+Define a function called last_char(s) that prints the last character of a string s e.g. last_char(“hello”) should print “o”, last_char(“34”) should print “4”. [2] {ET: 3mins}
+
+def last_char(s):
+	’’’
+	Prints the last character of the string s
+	s -> str
+	returns None
+’’’
+
+
+Long Script Problem [12 marks] {ET: 20mins}
+You are going to write a script that asks for a user’s first and last name and then prints it in a specific format and tells them how many characters are in their name. Do not panic! It looks long but each step is very short. You do not need to define any functions.
+
+You are allowed to ask for help on any of the questions but you will lose 1 point everytime you ask a question.
+
+Please make sure that the computer you are using matches the computer number you wrote on your question paper.
+
+Create a new script and name it with your first name, last name and school (Remember the rules for naming files) and save it in your folder (e.g. C:/users/zimcode/My Documents/school/name). 
+If you cannot do part a) ask for help, you will not be penalized.
+ 
+On the first line of your script write a comment with your name. [1]
+
+Define/Declare a new variable called first_name and make it input from the user with the question “First name? ”. [1]
+
+Define/Declare a new variable called last_name and make it input from the user with the question “Last name? ”. [1]
+
+Replace the old first_name with a new first name that is capitalized. (Hint: Take note of replace which means you must assign the capitalized first name to a variable!) [2]
+
+Replace the old last_name with a new last name that is all caps (upper case). (Hint: Take note of replace which means you must assign the uppercase last name to a variable!) [2]
+
+Define a new variable called full_name that is first_name concatenated with last_name with a space in between and print it. e.g. if first_name is Tonde and last_name is Moyo, full_name should “Tonde Moyo” with a space in between.[2]
+
+Store the length of full_name minus one (for the space) in variable called name_len. e.g. if the full name is “A B”, the length should be 2 not 3. [1]
+
+Print the statement “Your name has name_len characters” where name_len is the answer from h) (Hint: What type should name_len be for you to concatenate with a string?) [2]
+
+Here are examples outputs from code that works correctly.
+
+Example 1
+>>> First Name? Tonde
+>>> Last Name? Moyo
+Tonde MOYO
+Your name has 9 characters 
+
+Example 2
+>>> First Name? jerry
+>>> Last Name? muleya
+Jerry MULEYA
+Your name has 11 characters 
+
+Example 3
+>>> First Name? bABes
+>>> Last Name? WodUMo
+Babes WODUMO
+Your name has 11 characters 
+
+{ Total exam time + 10mins for instructions & delays = ~1 hour 
+  Consider:
+  1. Adding a few more small concept questions, multiple choice/TorF and code block questions {ET: 15 mins}
+  2. Adding a second long script problem.
+  3. Making the coding questions a bit harder by adding a few more concepts and steps {ET 30 mins}
+  Making the exam length total ~ 1 hour 45 mins. They can get 10 extra minutes.
+}

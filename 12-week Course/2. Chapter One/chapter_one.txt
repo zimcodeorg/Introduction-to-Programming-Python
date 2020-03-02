@@ -1,8 +1,9 @@
-Chapter 1 – Introduction to Python
+Chapter 1 – Introduction to Computers & Python
 
 1.1 Introduction to Computers. 
 
-A computer is a { INTRODUCTORY EXPLANATORY CONTENT - 1 paragraph }. 
+A computer is a programmable electronic device that manipulates information, or data. It has the ability to store, 
+retrieve, and process data. Your laptop, desktop, smartphone or tablet are all examples of computers.
 
 The computer system is made up of three things:
 
@@ -20,39 +21,124 @@ turning off the lights.
 
 (Figure 1) Picture of the Computer Model: {a}
 
-{ EXERCISE - Name different types of computers AND input, processing, output devices }
+Can you name different examples of input, processing, output devices?
 
 1.2 Operating System
 
-An operating system is a { INTRODUCTORY EXPLANATORY CONTENT - 1 paragraph }. 
+An operating system is the primary software that manages all the hardware and software on a computer. 
+The operating system, also known as an “OS,” interfaces with the computer’s hardware and provides services 
+that applications can use. For example, if you click print in Microsoft Word, Word sends the document you 
+want to print to the OS, which in turn communicates with the printer using special software called "drivers"
+in order to tell the cartridge or laser inside the printer what shapes to make on the paper using ink.
 
 Examples of Operating Systems are: Windows 10, MAC-OS, LINUX etc. Operating Systems are constantly being
 updated to work more efficiently and cater to new demands.
 
-(Figure 2) Icons from various operating systems: {null}
+(Figure 2) Icons from various operating systems: {null - needs to be made}
 
 One of the crucial things an OS does is to organize our files and folders: documents, movies, pictures, etc.
-{Brief explanation of a filesystem}
+A file systems is a way of organizing and storing files on a hard drive, flash drive, or any other storage device.
 
-{EXERCISE - Something about operating systems }
+Hard drive - a storage device that stores data. All the data your computer needs to function will be stored there. The
+most common type is the magnetic hard disk drive, that uses a magnetic layer to store 0s & 1s (data). It reads/writes to 
+this layer using special read "heads."
+
+The Hard Drive on your computer is usually denoted as C: although it can be denoted by other letters. C: means all the stuff
+stored on this hard drive. In that C:, you can have files and folders inside it.
+
+File - anything stores data e.g. .mp3 (music), .docx (MS Word), .exe (executable program), .jpeg (picture) or .txt (text).
+There are many different types of files, and their type is determined by their extensions. For example, you can tell that
+Zim_Code.txt is a text file because of it's extension .txt. This extension is important because it helps the OS 
+know how to open and edit that file. If you click a .txt file, the OS will use Notepad or MS Word to open it. If you click
+a .mp3 file, the OS will use VLC Media Player to open it. It decides how to open the files using their extension.
+
+Folder - anything that stores files or other folders. We call this a directory. It is not a file, but just a storage location
+for files and folders. Here is an example of a folder:
+
+Documents
+|_ homework1.docx
+|_ company_logo.jpeg
+|_ Vacations Pictures
+|  |_ picture1.jpeg
+|  |_ picture2.jpeg
+|_ Star Wars: A New Hope (1977).mp4
+
+The folder "Documents" contains 3 files and 1 folder. The folder inside it contains 2 files. The folder doesn't have any
+extensions on it because it doesn't store any data on it's own. It is just a storage reference location for files and other folders.
+Think of it as a paper bag. You can put an apple, banana and water bottle inside it. You can also put another paper bag inside it with
+cookies and milk. And so on, and so forth.
+
+Address - where a file or folder is located on the hard drive. This is similar to the address of the place where you live. In computer terms,
+we commonly refer to it as a path i.e. the path you need to take to reach the folder/file. The path of "Star Wars: A New Hope (1977).mp4" could 
+be something like "C:\Users\achitena\Documents\Star Wars: A New Hope (1977).mp4". Notice that the "Documents" folder is stored in another folder.
+
+Remember: folders are usually refered to as directories.
 
 1.3 The Command Line and the Graphic User Interface (GUI)
 
-A Graphic User Interface (GUI) is { INTRODUCTORY EXPLANATORY CONTENT - 1 paragraph }. Before we had the GUI, we had the command line.
-{ example of one of the first OS that ran on a CMD, e.g DOS }
+A GUI (graphical user interface) is a system of interactive visual components for computers. It helps us visualize the
+files stored on a computer in a human-readable format. For examples, if you want to open the Movies folder to watch
+your favorite action film stored inside, all you do is move the mouse cursor over the Movies folder and click on it.
+Before we had the GUI, we had the command line. Back then, if you wanted to watch your favorite film, you had to do so by 
+entering a command in the command line. Generally, your command has to specify the following, using memorized keywords:
+
+1. The application you are using to perform the action.
+2. The exact address of the file you want to perform an action on.
+3. The specific action you want to perform.
+4. Optional parameters of the action e.g. how many times you want to perform the action
+
+So, if all I had was the command line, instead of right-clicking my movie file, clicking Open with, and choosing VLC Media
+Player, I would have to type this in the command line to watch it:
+
+C:\WINDOWS\system32> start vlc "C:\Users\achitena\Downloads\Mad Max Fury Road (2015)\Mad.Max.Fury.Road.2015.mp4"
+
+Imagine having to do this every time you want do anything on a computer? Well, before the invention of the GUI, that is
+how people generally did things. An example of an early operating system that used this system is MS-DOS, which stands for 
+Microsoft Disk Operating System
+
+
 
 We still have the Command Line in modern computers because it helps us complete certain tasks quickly and more concisely.
-Here are examples of things you can do through the command line:
-{ List of things achievable through command line }.
+Here are some examples of things you can do through the command line:
 
-{ CODE DEMONSTRATION: 
-  Fundamental CMD commands + arithmetic in CMD demo }
+1. Move a file
+2. Open a file
+3. Close a program
+4. Delete a file
+5. Open a webpage in a browser
+6. Do arithmetic
+7. Shut down a computer
 
-{ EXERCISES:
-  Can only be complete using CMD only e.g creating a file, moving it, deleting etc }
+Here are some basic command line commands:
 
-{ RECAP:
-  Linking commands in the CMD to programming, briefly, then recap }
+help - line lists all the basic built-in commands at your disposal.
+dir - list all the contents inside the current directory
+cd - change directory
+mkdir - make a new directory
+cls - clear the contents of the command line screen
+
+Exercise 1.x: Master Hacker!
+
+You are going to use the following commands on the command line (Command Prompt) to create new text file called “myfile.txt” and 
+put it in a new folder you make in “My Documents.”
+
+a.	cd into drive C:
+b.	use dir to check if there is a folder called something like “users”
+c.	cd into the users folder
+d.	use dir to see the name of the user folder (something like ZimCode) and cd into it
+e.	make a new folder called “MyText” using mkdir
+f.	cd into the folder
+g.	Use the command notepad myfile.txt to create a new text file and save it.
+h.	Use the GUI browser (Windows Explorer) to see if the file is where you put it.
+
+Exercise: 1.y: Genius Hacker!
+
+Try to figure out how to open the Zim Code website (zimcode.org) in the Google Chrome browser, using only the command 
+line and what you have learnt so far. Remember, you can ask for help from the Command Line by literally typing "help".
+
+This is just a small example of the many things you can do in the command line. The whole idea of the command line is a standardized
+way to tell a computer what to do. In the next topic, you will learn about one very special way of doing this. 
+
 
 1.4 Introduction to Programming
 
