@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{f}\PYG{p}{():}
+	\PYG{k}{return} \PYG{n+nb+bp}{True}
+\end{Verbatim}

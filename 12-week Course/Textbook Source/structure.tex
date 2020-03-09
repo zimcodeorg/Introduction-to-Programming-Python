@@ -516,3 +516,44 @@ addtohook={%
 \fi
 }
 }
+
+%----------------------------------------------------------------------------------------
+%	CODE
+%----------------------------------------------------------------------------------------
+
+%Needs xcolor
+\usepackage{minted}
+\definecolor{LightGray}{gray}{0.95}
+
+\newcommand{\BatFancyFormatLine}{%
+  \def\FancyVerbFormatLine##1{> \,##1}%
+}
+
+\newcommand{\PythonFancyFormatLine}{%
+  \def\FancyVerbFormatLine##1{{>}{>}{>} \,##1}%
+}
+
+\newenvironment{script}
+{\VerbatimEnvironment\begin{minted}[mathescape,
+               linenos,
+               numbersep=5pt,
+               gobble=0,
+               bgcolor=LightGray,
+               frame=lines,
+               framesep=2mm]{python}}
+{\end{minted}}
+
+\newenvironment{cmd}
+{\VerbatimEnvironment\begin{minted}[formatcom=\BatFancyFormatLine ,
+               frame=lines,
+               framesep=2mm]{bat}}
+{\end{minted}}
+
+\newenvironment{shell}
+{\VerbatimEnvironment\begin{minted}[formatcom=\PythonFancyFormatLine ,
+               numbersep=5pt,
+               gobble=0,
+               bgcolor=LightGray,
+               frame=lines,
+               framesep=2mm]{python}}
+{\end{minted}}
