@@ -1,0 +1,588 @@
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Introduction to Computers and Python}
+
+\section{Introduction to Computers}
+
+A computer is a programmable electronic device that manipulates information, or data. It has the ability to store, retrieve, and process data. Your laptop, desktop, smartphone or tablet are all examples of computers.
+
+\noindent The computer system is made up of three things:
+\begin{description}
+\item[Input] – This is the information that a computer gets from outside, it will never act on its
+own e.g. when you type or touch a screen or talk into a microphone, you are giving an input of character. Things like keyboards, mice and touchscreens are called input devices.\\
+\item[Output] – This is what the computer gives out e.g. the picture on your screen, a sound or turning off the lights.\\
+\item[Processing] – These are the instructions and calculations that the computer must follow to do something with the input. For all the devices you use, you are used to being 
+involved with the input and output part. In programming, you get to directly design
+the processing part of a computer.\\
+\end{description}
+
+\begin{problem}
+Can you name different examples of input, processing, output devices?
+\end{problem}
+
+\begin{figure}[h]
+\centering\includegraphics[width=\linewidth]{Chapter_One/Figures/a.png}
+\caption{(Figure 1) Picture of the Computer Model: {a}}
+\label{fig:model} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Here is how to think about the way a computer works that you should use about throughout this entire book. 
+\begin{remark}
+A computer takes inputs and processes them using a set of rules designed by a programmer(a human) to produce an output.
+\end{remark}
+
+The fact that the rules that govern a computer are designed by a human is very important. It means that computers can make mistakes if the human programmers made mistakes! The computer will follow instructions exactly as you \textit{program} it to, not exactly as you \textit{want} it to. As you start your journey as a programmer, you will make lots of mistakes and that is normal but it is important to remember to make sure things work properly, we will try and teach you how in this book.
+
+\subsection{Operating Systems}
+
+An operating system is the primary software that manages all the hardware  (screen, keyboard, touchscreen etc.) and software (Microsoft Word, Google Chrome, Whatsapp etc.) on a computer. The operating system, also known as an “OS,” \textit{interfaces} (connects) with the computer’s hardware and provides services that applications can use. For example, if you click print in Microsoft Word, Word sends the document you want to print to the OS, which in turn communicates with the printer using special software called "drivers" in order to tell the cartridge or laser inside the printer what shapes to make on the paper using ink.
+
+Examples of Operating Systems are: Windows 10, MAC-OS, LINUX etc. Operating Systems are constantly being updated to work more efficiently and cater to new demands. This course uses Windows since that is the most popular OS available in Zimbabwe.
+%
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{(Figure 2) Icons from various operating systems: {null - needs to be made}}
+\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+%
+
+\subsection{File Systems}
+One of the crucial things an OS does is to organize our files and folders: documents, movies, pictures, etc. A file system is a way of organizing and storing files on a hard drive, flash drive, or any other storage device.
+
+\begin{definition}[Hard drive] A storage device for data. Data is any kind of information like pictures, documents, videos, music etc. All the data your computer needs to function will be stored there.
+\end{definition}
+
+In Windows, the Hard Drive on your computer is usually denoted as "C:" although it can be denoted by other letters. C: means all the stuff stored on this hard drive. In that C:, you can have files and folders inside it.
+
+\begin{definition}[File] Anything that stores data that can be opened by a special program e.g. an mp3 file can be opened by a nusic player, a .docx file can be opened by Microsoft Word, An executable file can run by the OS, a .py file can be run by the Python interpretor.
+\end{definition}
+
+There are many different types of files, and their type is determined by their extensions. For example, you can tell that \textit{ZimCode.txt} is a text file because of it's extension \textit{.txt} at the end of the file name. This extension is important because it helps the OS know how to open and edit that file. If you click a .txt file, the OS will use Notepad or MS Word to open it. If you click a .mp3 file, the OS will use a Media Player to open it. It decides how to open the files using their extension.
+
+\begin{definition}[Folder/Directory] The software object that stores files or other folders in a file system. It is also called a \textit{directory}. It is not a file, but just a storage location for files and folders. 
+\end{definition}
+
+Here is an example of a folder structure:
+
+%
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Image of a folder hierachy from windows explorer, preferably showing C:/, Users, Documents, Pictures etc. and matching the description below}
+\label{fig:filehierachy} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+%
+
+Figure \ref{fig:filehierachy} shows a folder "hierachy" that shows you what is contained in each folder. Notice that the harddrive C: is at the root meaning that everything is stored on C:. The folder "Documents" is inside the folder ZimCode which is inside the folder Users and contains 3 files and 1 folder. The folder inside it contains 2 files. The folder doesn't have any extensions on it because it doesn't store any data on it's own. It is just a storage reference location for files and other folders.
+Think of it as a paper bag. You can put an apple, banana and water bottle inside it. You can also put another paper bag inside the paper bag with pencils. And so on, and so forth.
+
+\begin{definition}[Path] The location of a file or folder on the hard drive for a given filesystem. This is similar to the address of the place where you live. In computer terms, we commonly refer to it as a path i.e. the path you need to take to reach the folder/file. The path of "Star Wars: A New Hope (1977).mp4" could be something like "C:$\backslash$Users$\backslash$ZimCode$\backslash$Documents$\backslash$Star Wars: A New Hope (1977).mp4". Notice that the "Documents" folder is stored in another folder. Just like addresses, it is impossible for 2 files to have the same address on one computer. 
+\end{definition}
+
+\begin{problem}Can you think of why it would be bad for two files to have the same path?\end{problem}
+
+\subsection{The Command Line and the Graphic User Interface (GUI)}
+
+A GUI (graphical user interface) is a system of interactive visual components for computers. It helps us visualize the files stored on a computer in a human-readable format. For examples, if you want to open the Movies folder to watch your favorite action film stored inside, all you do is move the mouse cursor over the Movies folder and click on it. The whatsapp symbol is also an example of GUI component that you touch to open Whatsapp on a phone.
+
+\begin{example}
+Example where they create a new folder and open a file using the GUI
+\end{example}
+
+Before we had the GUI, we only had the Command Line Interface (CLI). Back then, if you wanted to watch your favorite film, you had to do so by typing a command in the command line. This is like what they do in the movies with hackers. 
+
+To open the command line (a program called command prompt) in Windows, go to start and type \textbf{cmd} and press enter. You can open command prompt any other way you like. You should see a screen like the one shown in Figure \ref{fig:cmd}.
+
+Generally, your command has to specify some or all of the following, using memorized keywords:
+
+\begin{enumerate}
+\item The name of the program you are using to perform the action.
+\item The path of the file you want to perform an action on.
+\item The specific action you want to perform.
+\item Optional parameters of the action e.g. how many times you want to perform the action
+\end{enumerate}
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{ Command line figure showing the same Documents folder as above}
+\label{fig:cmd} 
+\end{figure}
+
+If all I had was the command line, instead of right-clicking my movie file, clicking Open with, and choosing VLC Media Player I would have to type a command like this in the command line to watch it:
+
+\begin{cmd}
+start vlc "C:\Users\ZimCode\Documents\Star Wars: A New Hope (1977).mp4".
+\end{cmd}
+
+Imagine having to do this every time you want do anything on a computer? Well, before the invention of the GUI, that is how people generally did things. An example of an early operating system that used this system is MS-DOS, which stands for Microsoft Disk Operating System
+
+We still have the Command Line in modern computers because it helps us complete certain tasks quickly and more concisely. We can do most of the things we can do using a GUI with the CLI, in the following example, we repeat what we did before but this time using the CLI.
+
+\begin{example}
+Example where they create a new folder and open the same file using the command line
+\end{example}
+
+Here are some more basic command line commands:
+
+\begin{itemize}
+\item \textbf{help} - line lists all the basic built-in commands at your disposal.
+\item \textbf{dir} - list all the contents inside the current directory
+\item \textbf{cd} - change directory
+\item \textbf{mkdir} - make a new directory
+\item \textbf{cls} - clear the contents of the command line screen
+\end{itemize}
+
+
+\begin{exercise}\textbf{Master Hacker!}
+
+You are going to use the following commands on the command line (Command Prompt) to create new text file called “myfile.txt” and 
+put it in a new folder you make in “My Documents.”
+
+\begin{enumerate}
+\item \textbf{cd} into drive C:
+\item Use \textbf{dir} to check if there is a folder called something like “users”
+\item \textbf{cd} into the users folder
+\item Use \textbf{dir} to see the name of the user folder (something like ZimCode) and \textbf{cd} into it
+\item Make a new folder called “MyText” using \textbf{mkdir}
+\item \textbf{cd} into the folder
+\item Use the command \mint{bat}{notepad myfile.txt} to create a new text file and save it.
+\item Use the GUI browser (Windows Explorer) to see if the file is where you put it.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise} Genius Hacker!
+
+Try to figure out how to open the Zim Code website (zimcode.org) in the Google Chrome browser, using only the command line and what you have learnt so far. Remember, you can ask for help from the Command Line by literally typing "help".
+\end{exercise}
+
+This is just a small example of the many things you can do in the command line. The whole idea of the command line is a standardized way to tell a computer what to do. In the next topic, you will learn about one very special way of doing this. 
+
+
+\section{Introduction to Programming}
+Programming is writing down a set of instructions for the computer to follow. How do you give instructions to someone? You have to communicate using a language. There are many programming languages that exist, we are going to teach you Python. Python is called a high level interpreted language. We will explain what this means a bit later.
+
+Computers “think” only in ones and zeroes yet they are capable of doing so many things. How is this possible? A computer is basically a calculator, all it actually does is calculations and from these calculations, you can do more complicated things. So if a computer only understands ones and zeroes, how do we communicate with it? Just like any other language, you have to translate it so that other people can understand, the ones and zeroes are translated to other languages until they are translated into a high level language. A high level language is a language that humans can read and understand easily unlike ones and zeros.
+
+When we say Python is an interpreted language, we mean that it follows instructions one by one in the order that you write them then if it gets to an error it crashes. If you give two instructions like:
+\begin{enumerate}
+\item Go outside
+\item Jump to the moon
+\end{enumerate}
+python will go outside and then it will realize that it can’t jump to the moon and give you an error.
+
+The opposite of an interpreted language is a \textit{compiled} language. A compiled language first checks to make sure there are no errors before it runs. So if you gave it the two instructions above it will not even tray and go outside, it will immediately tell you that it cannot jump to the moon.
+
+Unfortunately, computers are not very clever, in fact a computer is a very stupid machine that
+blindly follows any instructions you give it. It will always try to do whatever you tell it to do. It also
+follows its language very strictly, if you put a small (lower case) letter where there is supposed to be a capital (upper case) letter, it will be completely confused and give you an error. You will see this as we go along because you will definitely have lots of errors.
+
+\subsection{Why Python?}
+
+We choose to teach Python because it is a relatively simple yet extremely powerful programming
+language to understand. Some examples of apps/websites written in Python are Instagram,
+Pinterest, Parts of Google and most of YouTube and many more. The most important reason is that because it is simple and very useful, it will allow you to learn the core concepts in programming which allow you to learn other languages much faster.
+
+In addition to all these benefits, Python is one of the most popular languages in the world. In 2020, the average yearly pay for a Python programmer was about \$ 100,000/year in the US. It is also the language taught in most universities and is used in the fields of data science and Artificial Intelligence are probably some of the best jobs in the future and today.
+
+I hope at that we have convinced you to learn Python because no matter who you are, it will likely be useful at some point in your life if you need to program anything.
+
+\subsection{The IDE}
+So how do we write code? We use something called an Integrated Development Environment (IDE)
+
+\begin{definition}[IDE]
+The software used to help a programmer write code, debug it and usually to run it as well
+\end{definition}
+
+After following the instructions on how to install Python 3, open the program
+IDLE that was installed with Python. (Try doing this using the Command Line!) IDLE is the IDE that we will be using to write and run most of our code in this course. Whenever you install Python, IDLE will also be installed. When you open it, your screen should look like :
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{Chapter_One/Figures/b.png}
+\caption{What you see when you open IDLE on Windows}
+\label{fig:cmd} 
+\end{figure}
+
+This is called the Python Shell, it is what allows you to enter in commands one by one. Can you think of another shell we have seen before? 
+
+\subsubsection{Printing to Standard Output}
+Now it's time to write our first line of code! In the shell in front of {>}{>}>, type in the following commanc
+
+\begin{shell}
+print("Hello World") 
+\end{shell}
+
+You have written your first line of code! It tells Python to output/print the words “Hello World” to standard output. Standard output means it just prints the words in the shell after the command is run. Notice how you typed in an input (command), the computer processed that input and it gave you as an output (printed words).
+
+\begin{exercise} \textbf{Say my name}
+Change the words inside the quotation marks(") so that it say “Hello” and followed by your name.
+Do not remove or add anything else! You have learned your first piece of code using the print()
+function!
+\end{exercise}
+
+\subsubsection{Arithmetic}
+Earlier we said a computer is a calculator, let’s use the computer as a calculator. Execute the
+following code, pressing enter after every line to see the output and see if it gives you the right answer. Do not include the things that come after the
+“\#” symbol.
+
+\begin{example} Python for calculations
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{Chapter_One/Figures/c.png}
+\caption{Using the Python shell as a calculator}
+\label{fig:cmd} 
+\end{figure}
+\end{example}
+
+\begin{exercise} \textbf{Back to first grade}
+Use the symbols you used above to try and do more calculations. Now execute the following code:
+\begin{shell}
+5//2
+3//2
+29//5
+\end{shell}
+\end{exercise}
+
+What do you think the “//” symbol does? This is called floor division, it gives you the whole number from when you divide two numbers. E.g. 5//3 is 1 remainder 2 but the floor division operator only gives you the whole number part which is 1.
+Now execute this code and try and figure out what it does.
+\begin{shell}
+3%2
+3%3
+3%4
+3%7
+\end{shell}
+
+The “\%” symbol is called the “mod operator”, it gives you the remainder after division.
+Let’s make our calculations a bit more complicated. The rules of BODMAS (Brackets, pOwers,
+Division, Multiplication, Addition, Subtraction) that you learned in primary school work here just like for your calculator. Decimals in Python use a full stop which is usually called a period (.), not a
+comma (,). Notice that even when you are multiplying things in brackets, you have to put the * operator!
+
+\begin{exercise} BODMAS
+Do the following calculation by head and then confirm it on the shell
+\begin{shell}
+
+ 2*(2)
+ 2(2) #Why is this an error?
+ 17//7 + 23%3 + 3**2
+ (13+(34/2)*23%4-12)
+(23//5)*7/(12%5)+5 \#19.0
+((67%5)*(-4*-0.5))**0.5 \#2.0
+\end{shell}
+\end{exercise}
+
+\subsubsection{Max/Min/Round}
+We can also find the maximum and minimum of a group of numbers separated by commas. What 
+This is called importing the math module, we will be importing many more modules so remember
+how it’s done. 
+
+\begin{shell}
+ max(1,2,3,4,5)
+ min(1,2,3,4,5)
+ max(24,3,7,-3)
+ min(23,-4,0,89)
+\end{shell}
+
+To round off numbers we use the round() function. 
+\begin{shell}
+ round(9.4)
+ round(9.7)
+\end{shell}
+
+\subsubsection{The math module}
+If we want to use Python as a scientific calculator, to do this we have to borrow the tools from somewhere else using the following code:
+\begin{shell}
+ import math
+ \end{shell}
+ To use the more advanced calculations, we always have to execute the code above. Let’s see what we can do.
+\begin{shell}
+ math.sqrt(4) #Find squareroot of 4
+ math.sin(1) 	#Find sin(1)
+ math.pi #The number or pi
+ math.cos(math.pi) 	#Find cos(\(\pi\)) or cosine of pi
+ math.log10(100) 	#Find log(100) to base 10 
+\end{shell}
+
+Remember that this will not work if you do not import the math module first!
+\begin{exercise} Scientific calculator
+a) Close IDLE and open it again.
+b) Calculate the area of a circle of radius 2 using math.pi
+c) Copy the answer and round it off to the nearest unit using round()
+\end{exercise}
+
+So far you have been typing in commands one by one and executing them, but what if you are
+writing some really complicated code like a music player. It would be disaster if it executed your
+code right after you’ve typed it, it’s like writing a composition with an examiner who marks after
+every sentence. You want to first write out parts of your code, test them and then write more and if you need to change anything, you can go back.
+In Python, you can write code using a script which allows you to write a lot of code at once. In IDLE, go to File > New or press Ctrl + N. You should see a blank screen. Type in the “Hello World” code from before and then go to Run > Run Module or press F5. It should give the same output as before.
+
+Now let’s write some more complex code.
+
+\begin{script}
+name = input("What is your name?: ")
+print("Hi", name) 
+\end{script}
+
+This code asks you to type in your name and then when you press enter, it greets you. When you run a script, it never prints anything unless you use the print() function unlike the shell where if you type in a calculation, it immediately gives you an output.
+
+\begin{exercise} \textbf{So many questions}
+
+Change the words inside the quotation marks only so that it asks you different things and gives you a different answer e.g. asking for your age then make it pring “You are 17”. Only edit the text in quotes.
+\end{exercise}
+
+\begin{summaryBox} \subsubsection{Summary}
+You should now know:
+\begin{itemize}
+\item That a computer take inputs, processes them and gives outputs, and give examples
+\item The basics of what an Operating System and File system are
+\item The differences between a GUI and CLI
+\item How to make a folder, change directory and open files using both the GUI and CLI
+\item That Python is a high level interpreted programming language and what that means
+\item What is IDLE and how do you open it?
+\item The differences between a script and a shell
+\item Writing the Hello World application in both a script and in the python shell
+\item How to do basic arithmetic operations as well as using floor, mod operators, min, max and round functions with BODMAS rules
+\item How to import import the math module and do basic calculations using cos, sin, pi etc.
+\item How to write a simple application that takes input from the user and prints it to standard output
+\end{itemize}
+\end{summaryBox}
+%%------------------------------------------------
+%
+%\section{Citation}\index{Citation}
+%
+%This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+%
+%%------------------------------------------------
+%
+%\section{Lists}\index{Lists}
+%
+%Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+%
+%\subsection{Numbered List}\index{Lists!Numbered List}
+%
+%\begin{enumerate}
+%\item The first item
+%\item The second item
+%\item The third item
+%\end{enumerate}
+%
+%\subsection{Bullet Points}\index{Lists!Bullet Points}
+%
+%\begin{itemize}
+%\item The first item
+%\item The second item
+%\item The third item
+%\end{itemize}
+%
+%\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+%
+%\begin{description}
+%\item[Name] Description
+%\item[Word] Definition
+%\item[Comment] Elaboration
+%\end{description}
+%
+%\section{Theorems}\index{Theorems}
+%
+%This is an example of theorems.
+%
+%\subsection{Several equations}\index{Theorems!Several Equations}
+%This is a theorem consisting of several equations.
+%
+%\begin{theorem}[Name of the theorem]
+%In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
+%\begin{align}
+%& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+%&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+%\end{align}
+%\end{theorem}
+%
+%\subsection{Single Line}\index{Theorems!Single Line}
+%This is a theorem consisting of just one line.
+%
+%\begin{theorem}
+%A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+%\end{theorem}
+%
+%%------------------------------------------------
+%
+%\section{Definitions}\index{Definitions}
+%
+%This is an example of a definition. A definition could be mathematical or it could define a concept.
+%
+%\begin{definition}[Definition name]
+%Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
+%\begin{align}
+%& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
+%& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
+%& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
+%\end{align}
+%\end{definition}
+%
+%%------------------------------------------------
+%
+%\section{Notations}\index{Notations}
+%
+%\begin{notation}
+%Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
+%\begin{enumerate}
+%\item Bounded support $G$;
+%\item Infinitely differentiable;
+%\end{enumerate}
+%a vector space is denoted by $\mathcal{D}(G)$. 
+%\end{notation}
+%
+%%------------------------------------------------
+%
+%\section{Remarks}\index{Remarks}
+%
+%This is an example of a remark.
+%
+%\begin{remark}
+%The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+%\end{remark}
+%
+%%------------------------------------------------
+%
+%\section{Corollaries}\index{Corollaries}
+%
+%This is an example of a corollary.
+%
+%\begin{corollary}[Corollary name]
+%The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+%\end{corollary}
+%
+%%------------------------------------------------
+%
+%\section{Propositions}\index{Propositions}
+%
+%This is an example of propositions.
+%
+%\subsection{Several equations}\index{Propositions!Several Equations}
+%
+%\begin{proposition}[Proposition name]
+%It has the properties:
+%\begin{align}
+%& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+%&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+%\end{align}
+%\end{proposition}
+%
+%\subsection{Single Line}\index{Propositions!Single Line}
+%
+%\begin{proposition} 
+%Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
+%\end{proposition}
+%
+%%------------------------------------------------
+%
+%\section{Examples}\index{Examples}
+%
+%This is an example of examples.
+%
+%\subsection{Equation and Text}\index{Examples!Equation and Text}
+%
+%\begin{example}
+%Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+%\begin{equation}
+%f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+%& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+%\end{equation}
+%The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+%\end{example}
+%
+%\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
+%
+%\begin{example}[Example name]
+%\lipsum[2]
+%\end{example}
+%
+%%------------------------------------------------
+%
+%\section{Exercises}\index{Exercises}
+%
+%This is an example of an exercise.
+%
+%\begin{exercise}
+%This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
+%\end{exercise}
+%
+%%------------------------------------------------
+%
+%\section{Problems}\index{Problems}
+%
+%\begin{problem}
+%What is the average airspeed velocity of an unladen swallow?
+%\end{problem}
+%
+%%------------------------------------------------
+%
+%\section{Vocabulary}\index{Vocabulary}
+%
+%Define a word to improve a students' vocabulary.
+%
+%\begin{vocabulary}[Word]
+%Definition of word.
+%\end{vocabulary}
+%
+%\section{Figure}\index{Figure}
+%
+%\begin{figure}[h]
+%\centering\includegraphics[scale=0.5]{placeholder.jpg}
+%\caption{Figure caption}
+%\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%Referencing Figure \ref{fig:placeholder} in-text automatically.
+%
+%\section{Table}\index{Table}
+%
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{l l l}
+%\toprule
+%\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+%\midrule
+%Treatment 1 & 0.0003262 & 0.562 \\
+%Treatment 2 & 0.0015681 & 0.910 \\
+%Treatment 3 & 0.0009271 & 0.296 \\
+%\bottomrule
+%\end{tabular}
+%\caption{Table caption}
+%\label{tab:example} % Unique label used for referencing the table in-text
+%%\addcontentsline{toc}{table}{Table \ref{tab:example}} % Uncomment to add the table to the table of contents
+%\end{table}
+%
+%\section{Code}
+%
+%If code is in a file you can use
+%
+%\inputminted{python}{Introduction/code.py}
+%
+%Note that the path must be relative to the main.tex directory\\
+%\newline
+%For one line code
+%
+%\mint{html}|<h2>Something <b>here</b></h2>|
+%
+%For a python script
+%
+%\begin{script}
+%def f():
+%	return True
+%\end{script}
+%
+%For a python shell
+%
+%\begin{shell}
+%'1' in '4521'
+%\end{shell}
+%
+%For a cmd prompt
+%
+%\begin{cmd}
+%dir
+%cd
+%cd ..
+%\end{cmd}
