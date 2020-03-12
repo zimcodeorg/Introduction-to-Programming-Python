@@ -1,0 +1,92 @@
+Below are the changes I want made. Do all of this in plain text, I will convert it to tex myself so that it compiles properly
+There will be an example of the old format and then I will put the new format I want it in
+========================================================================
+Exercises
+==========================================================================
+Exercise 2.3: Variables
+
+Declare a variable x
+
+-----------------------------------------becomes
+\begin{exercise} \textbf{Variables}
+Declare a variable x
+\end{exercise}
+========================================================================
+Examples
+==========================================================================
+Example 2.3: How to fly
+
+Fly me to the moon
+
+-----------------------------------------becomes
+\begin{example} \textbf{How to fly}
+Fly me to the moon
+\end{example}
+========================================================================
+Any bulleted list do the following
+==========================================================================
+- Define f
+- Call f
+- print f
+-----------------------------------------becomes
+\begin{itemize}
+\item Define f
+\item Call f
+\item print f
+\end{itemize}
+========================================================================
+Any numbered list do the folloiwing
+========================================================================
+1. Define f
+2. Call f
+3. print f
+--------------------------------------------becomes
+\begin{enumerate}
+\item Define f
+\item Call f
+\item print f
+\end{enumerate}
+========================================================================
+Anything typed in the shell
+========================================================================
+>>> print(1)
+>>> print("x")         #Please retype " because word uses a different character
+--------------------------------------------becomes
+\begin{shell}
+print(1)
+print("x")
+\end{shell}
+========================================================================
+Anything typed in a script
+========================================================================
+print(1)
+def P():
+	print("x")         Please retype " because word uses a different character
+--------------------------------------------becomes
+\begin{script}
+print(1)
+def P():
+	print("x")
+\end{script}
+========================================================================
+Anywhere with a figure put the following text
+========================================================================
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+========================================================================
+If a word (e.g. for) is in bold in a paragraph
+========================================================================
+We do this for each iteration
+--------------------------------------becomes
+We do this \textbf{for} each iteration
+========================================================================
+For every heading inside a chapter of the book
+========================================================================
+2.1. Variables
+--------------------------------------becomes
+\section{Variables}
+========================================================================
