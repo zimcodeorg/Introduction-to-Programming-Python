@@ -1,0 +1,187 @@
+Chapter 2 – Variables
+
+\section{Abstraction}
+
+So far, we have only been considering things that an ordinary calculator can do with just a few simple
+operations. The first and probably the most powerful tool in programming is abstraction. Abstraction
+is the use of an idea rather than an event. This is best shown through examples.
+
+\begin{example} \textbf{Example 2.1 – Using a formula}
+If I were to tell you that to calculate the distance travelled by a car I did the following calculation:
+
+distance = 2 * 3 = 6
+
+Is it possible for you to know how I did it? What is 2? What is 3? What units did I use? Is it 6 metres
+per second or 6 kilometres per minute? Clearly this is not useful if I want to learn how to calculate
+distance by myself. How do we know how to calculate distance? How do we calculate distance?
+
+The answer is that we know the formula:
+
+distance = speed * time
+
+Now, we can calculate any distance given any speed and any time. This is what we mean by
+abstraction. Rather than using an event (i.e. exact numbers) we use an idea (i.e. a formula).
+\end{example}
+
+\begin{exercise} \textbf{Supplementary Exercise 2.1 (Science) – Making a complicated calculation easy}
+Imagine that you are the assistant to a crazy physicist named Larmour who needs to know the power
+radiated from a point (The point is that this is a complicated calculation, you do not even need to
+know what it means). Larmour says he wrote his formula on the board and needs the answer to
+finish making a machine that gets rid of all homework so you happily help him. The formula is:
+
+(Figure 1) Formula {a} 
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+He also wrote what number each of the symbols is:
+e = 1.6 x 10-19
+a = 1
+ε0 = 8.85418782 × 10-12
+c = 3 x 108
+
+i) What is P? The point is that you can calculate a very complicated thing just because you know the
+formula or because Larmour “abstracted” the idea.
+ii) Suppose Larmour says he made a mistake and a is actually 2, how do you use your answer from i)
+to fix this easily?
+\end{exercise}
+
+\section{Variables}
+Let’s go back to the example with distance where we have:
+
+distance = speed * time
+
+We have multiplied before so we know what the “*” does. There are two new things i.e. the three
+words and the “=” sign. The three words are called variables, which has the same meaning as in
+mathematics. Variables are objects that hold something e.g. “time” holds the number for a time,
+“speed” the number for a speed etc. When calculating distance, what do you know first, the things
+on the right or the things on the left? We know the speed and time first so we first multiply the
+numbers on the right and then the “=” sign puts them in the “distance” variable. How do we know it
+is a variable? Because it has a name. Anything that has a name in Python is called an object and most
+objects are variables.
+
+\begin{exercise} \textbf{Exercise 2.1 – Declaring variables}
+In the shell, execute (type it then press enter) the following code:
+\begin{shell}
+1 >>> x = 3
+2 >>> print(x)
+3 >>> y = 4
+4 >>> print(y)
+5 >>> print(x+y)
+6 >>> x = y
+7 >>> print(y)
+8 >>> name = “Python”         #You can put your own name here
+9 >>> print(name)
+\end{shell}
+	
+Notice how the letter “x” now stands for 3 and “y” stands for 4 and you can do the things you can do
+to numbers to x and y because x and y actually represent the numbers in the calculation.
+\end{exercise}
+
+\section{Demonstration: Let’s be variables!}
+
+This is a good chance to learn everyone’s name. Everyone in the class will be a variable called by
+their name, there will be someone who is an operator and the tutor will be the interpreter
+(Python). Each person will get a piece of paper (this is the “memory”) with a number on it whenever
+they are ‘declared’ as a variable. Here are the rules:
+
+\begin{enumerate}
+\item Whenever the interpreter assigns a value to a variable, it will say name = number and then
+it will give someone with the name name a fresh piece of paper with a number number
+written on it. If name was already carrying a number, they throw the old number away and
+get the new number.
+\item Whenever the interpreter says print(name), the person with the name name should shout
+the number they are carrying. If they are not carrying a number they should say ‘name not
+defined’.
+\item Each person can have a maximum of one number.
+\item Whenever the interpreter says something like “print(x+y)”, the calculator checks the person
+called x and checks the person called y and shouts the answer.
+\end{enumerate}
+
+Shout at a few instructions declaring people as variables, printing variables, exchanging variables and
+adding/subtracting variables and assigning them to new ones etc. Have fun!
+
+\begin{exercise} \textbf{Exercise 2.2: Python Siri}
+a) Now that we can code, we want to make our own version of iPhone’s Siri. Write a script that asks
+for the user’s name using input() and then asks for the age and then prints out a greeting that
+says “Hi, [name], you are [age] years old” where [name] is replaced by the person’s name and
+[age] is replaced by the person’s age. Think about what variables you can use and how you would
+name them
+
+b) Write a script that exchanges the values of two variables x and y. Think about the demonstration
+you saw/did and how you would do it in the demonstration and do it in code using only three
+lines. (Hint: You can use as many variables as you want)
+\end{exercise}
+
+\section{Rules for naming variables}
+
+You may have noticed how much freedom we have when naming variables, this allows to be able to
+make smart decisions about how we name them. If you have a long script with lots of variables, you
+want to be able to know what that variable is easily instead of all your variables being x or y. Here
+are some rules for naming variables, the first 5 rules are not optional, you will get errors if you do
+them wrong.
+
+\begin{enumerate}
+\item Never use python keywords (e.g. print, def, import etc.) Basically, if the word changes colour
+when you type it, do not use it as a variable.
+\item Do not use the name of a module you have imported (e.g. math), if you import something,
+its name has been taken, you should not use it for a variable.
+\item Do not use any punctuation except underscores (_ or Shift + -) in your variable names.
+\item Do not use spaces in your variables, if you want to have a space, use an underscore (_) e.g.
+two_words.
+\item Your variable name should never start with a number (e.g. 1st_variable)
+\item Give your variables names that anyone can understand (e.g. name, age, number_of_cats)
+\item If your variable is going to be changing, use only lower case letters e.g. cost_of_food.
+\item If your variable is just a number that you input once at the beginning of the document use all
+upper case letters e.g. NUM_WHEELS_ON_CAR.
+\end{enumerate}
+
+\section{Python keywords and Comments}
+
+Python has special words that mean special things, you can always see a keyword by the way it
+changes colour when you type it in e.g. if, import, elif, print etc. These should never be used as
+variable names.
+
+We say Python is human readable but sometimes our code gets complicated and someone who did
+not write the code might want to understand what it does. The person who writes the code can
+write comments to explain what is going on. Comments always start with the pound sign (aka
+hashtag) symbol (#). Anything written on the same line in red after the symbol is ignored by Python,
+so you can write anything you want. Usually they are used to explain steps. You are encouraged to
+always write your own comments to explain what you are doing, even to yourself. Here is an
+example where comments are used:
+
+\begin{script}
+x = 1         #Declare a variable x as 1
+x += 1        #Add 1 to x
+print(x)      #Print the new x
+\end{script}
+
+\section{Syntax and Semantics}
+
+So you have been typing code and you have probably run into errors already, for now all the errors
+you have come across are “syntax” errors. Syntax has to do with rules of a language, things like
+grammar, spelling and punctuation are the syntax of the English language. Similarly in Python, every
+bit of code that you type must follow the syntax of Python otherwise you will get a syntax error like
+the one below when you forget to close the bracket.
+
+(Figure 2) Syntax Error {b}
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Another type of error is what is called a semantic error, this is an error where your code runs but it
+does not do what you want it to, for example if you want to add two numbers but Python subtracts
+them instead. These errors are very dangerous because Python will not tell you that your code is
+wrong, so you have to test your code and if it has problems, you “debug” it. Debugging means fixing
+code that does not work properly.
+
+\section{Toolbox 2.1}
+1. Variables
+2. Comments
+3. Coding vocabulary (syntax, semantics, debugging)
