@@ -1,5 +1,64 @@
 Below are the changes I want made. Do all of this in plain text, I will convert it to tex myself so that it compiles properly
 There will be an example of the old format and then I will put the new format I want it in
+
+General Rules:
+1. Remove all chapter/example/exercise numbers etc. Latex will do them automatically
+2. Remove all the >>> in the shell code and remove line numbers in code if they exist, they are also automated
+3. Put the descriptions of figures in the brackets of caption (see figures below) \caption{}
+4. Demonstrations are now deprecated since this is now a student book, for now treat them as examples and I will 
+try and turn them into examples.
+========================================================================
+Chapter Title
+==========================================================================
+Chapter 12 - Variables
+-----------------------------------------becomes
+\Chapter{Variables}
+========================================================================
+Small headings - These are headings that are obviously smaller than the sections in a chapter.
+If you are not sure if something is a small heading, make it  a \section{}
+==========================================================================
+Python keywords and Comments
+-----------------------------------------becomes
+\subsection{Python keywords and Comments}
+========================================================================
+Mathematical Equations
+==========================================================================
+Distance = Speed*Time
+-----------------------------------------becomes
+\[ Distance = Speed*Time \]
+========================================================================
+Variables and keywords in the text, Do this especially for anythin that has _ in the text
+==========================================================================
+The variable num_guesses is an int
+-----------------------------------------becomes
+The \icd{num_guesses} is an \icd{int}
+========================================================================
+Toolboxes
+==========================================================================
+Toolbox 2.3: Screwdrivers
+1. Flat
+2. Phillips
+-----------------------------------------becomes
+\begin{toolbox} \textbf{Screwdrivers}
+\begin{enumerate}
+\item Flat
+\item Phillips
+\end{enumerate}
+\end{toolbox}
+========================================================================
+Any numbered list do the following.
+If it is numbered a), b) ... replace label=\alph*
+If it is numbered i) ii) ... replace label=\roman*
+========================================================================
+1. Define f
+2. Call f
+3. print f
+--------------------------------------------becomes
+\begin{enumerate}[label=\arabic*]
+\item Define f
+\item Call f
+\item print f
+\end{enumerate}
 ========================================================================
 Exercises
 ==========================================================================
@@ -35,18 +94,6 @@ Any bulleted list do the following
 \item print f
 \end{itemize}
 ========================================================================
-Any numbered list do the folloiwing
-========================================================================
-1. Define f
-2. Call f
-3. print f
---------------------------------------------becomes
-\begin{enumerate}
-\item Define f
-\item Call f
-\item print f
-\end{enumerate}
-========================================================================
 Anything typed in the shell
 ========================================================================
 >>> print(1)
@@ -74,15 +121,28 @@ Anywhere with a figure put the following text
 \begin{figure}[h]
 \centering\includegraphics[scale=0.5]{placeholder.jpg}
 \caption{Missing figure}
-\label{fig:placeholder} % Unique label used for referencing the figure in-text
+\label{fig:placeholder} 
+% Unique label used for referencing the figure in-text
 %\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
 \end{figure}
 ========================================================================
-If a word (e.g. for) is in bold in a paragraph
+If a word (e.g. for) is in bold in a paragraph and is NOT code or a variable
 ========================================================================
-We do this for each iteration
+This word is bold
 --------------------------------------becomes
-We do this \textbf{for} each iteration
+This word is \textbf{bold}
+========================================================================
+If a word (e.g. for) is in italics in a paragraph and is NOT code or a variable
+========================================================================
+This word is italicized
+--------------------------------------becomes
+This word is \textit{italicized}
+========================================================================
+If a word (e.g. for) is in underlined in a paragraph and is NOT code or a variable
+========================================================================
+This word is underlined
+--------------------------------------becomes
+This word is \underline{underlined}
 ========================================================================
 For every heading inside a chapter of the book
 ========================================================================
