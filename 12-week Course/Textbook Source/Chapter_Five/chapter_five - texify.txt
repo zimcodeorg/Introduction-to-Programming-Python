@@ -1,0 +1,229 @@
+\Chapter{Flow Control}
+
+For computers to be more useful than an ordinary calculator, they should be able to ‘make decisions’. This means that given many options, they can choose the proper one and do the right thing. Consider how you make decisions every day, here are some examples of how you might think:
+Q: \textbf{If} I am hungry
+A: Eat
+
+Q: \textbf{If} it is 6AM and if I have to go to school
+A: Wake up
+Q: Or \textbf{else} (it is no 6AM or I do not have school)
+A: Continue sleeping
+
+Q: \textbf{If} I am bored
+A: Watch TV
+Q: or \textbf{else if} someone is watching the TV
+A: Read a book
+Q: or \textbf{else}
+A: Do my homework
+
+This is usually what happens in your mind. You ask yourself questions and then based on whether the answer is yes or no, you do something. Python can do the same, how does Python ask questions and what are the possible answers? This is where booleans are extremely useful if you were wondering. In the above examples, the tests (questions) are asked in a specific way using three methods;  \textbf{if}, \textbf{else if} and \textbf{else}. You are encouraged to ask yourself questions in this way to get the hang of it, it also helps you translate your ideas into code.
+
+To make decisions, Python uses what are called if statements which have the following syntax:
+
+\[ if conditional_is_True:
+	#Follow these instructions \]
+
+Notice the colon at the end of the line which must always be there, followed by an indentation of the instructions. We replace conditional_is_True with a boolean statement such as those that we used when we were learning about booleans or a function that returns True or False. We then replace the comment with the actions we want to take if and only if the boolean is True. e.g. for our previous example:
+
+\[ if i_am_hungry():
+	eat() \]
+
+We have replaced the actions with functions. Let’s do some example scripts:
+
+\begin{script}
+if 2>1:						#What is the boolean value?
+	print(“2 is greater than 1”)	#Must be indented
+\end{script}
+
+Of course this is not useful since 2 is always greater than 1 so it will always print the statement. Let’s say we want to test if a random number x is greater than 5 and print a statement if it is. This number can be anything. (If it can be anything what do we use to represent it?) Here is the script that checks.
+
+\begin{script}
+x = 10
+
+if x > 5:
+	print(x, “is greater than 5”)
+
+print(“Done!”)
+\end{script}
+
+We chose the x = 10 randomly, we could have chosen any number we want to test. Why do I have to declare x as something for this code to work? If x is nothing, how do I compare it to 5? x has to be a number so that I can compare it to 5 so we have to say x = something. Let’s make this code more useful so that it asks the user for a number and tells the user if the number is greater than 5.
+
+\begin{script}
+x = input(“Enter a number: ”)
+x = float(x)			     #Why is this line important?(Ch. 3)
+
+if x > 5:
+	print(x, “is greater than 5”)
+
+print(“Done!”)
+\end{script}
+
+Test this with different numbers and see what it does. 
+
+\section{If-Else Diagrams}
+
+These are diagrams which show the order in which instructions are going to be run. They are very useful when you start using flow control. You always start at the same point and end at the same point but what happens is determined by the conditionals. Each path is called a branch of the if statement. Anything under True is indented, everything under False or with nothing starts on the same line as the if statement. You can use this to help you know when to indent.
+
+\begin{figure}[a]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} 
+% Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+You will notice that our first example does not print anything if the number is less than 5 or equal to 5. We want to account for these cases as well. Let’s start with the case where x == 5. We will now use an \textbf{elif} (pronounced else if) statement. These statements mean exactly what they mean in English. An \textbf{elif" has the following syntax:
+[\ if conditional_is_True:
+	#Do these instructions and ignore all the following elifs
+elif other_conditional_is_True:
+	#Do these instructions and ignore all the following elifs \]
+
+Here are the important things about elif statements:
+\begin{enumerate}[label=\roman*]
+\item An \textbf{elif} statement always comes after an \textbf{if} statement, you will never start with an \textbf{elif} statement. This makes sense if you think about it in English grammar.
+\item The \textbf{elif}  statement starts on the same line as the \textbf{if} statement. If this does not happen you will get an error.
+\item You can add as many \textbf{elif} statements as you like e.g. if there are a thousand options, you can include them all.
+\end{enumerate}
+
+Let’s improve our previous example:
+
+\begin{script}
+x = input(“Enter a number: ”)
+x = float(x)			     
+
+if x > 5:
+	print(x, “is greater than 5”)
+elif x == 5:
+	print(x, “is equal to 5”)
+
+print(“Done!”)
+\end{script}
+Try this out and see what it does, especially with 5 and with numbers greater than 5. It’s important to understand how this works. Each \textbf{if} or \textbf{elif} statement is called a branch because these are all the different branches you code can follow. See Figure 5-1 for a drawing of this. The code first tests if x is greater than 5, if this is True, it prints x is greater than 5 and then ignores the elif statement and goes to the next block of code on the same line as the if statement (i.e. \textbf{print(“Done!”)}. If x is not greater than 5 (the first branch test is False) it then goes to the second branch and tests if x is equal to 5. If x is equal to 5, it prints x is equal to 5 then goes to the last line. If x is not equal to 5, it ignores the elif instructions and just goes to print “Done!”. Here is the if-else diagram for the above script.
+
+\begin{figure}[b]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} 
+% Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Now let’s deal with the last case where x is less than 5. Here we can use another \textbf{elif} statement the same way we for the last case or because we know that this is the only other option, we can use an \textbf{else} statement. \textbf{Else} statements take the following form:
+
+\[ if conditional_is_True:
+	#Do these instructions and ignore all the other elifs and else
+elif other_conditional_is_True:
+	#Do these instructions and ignore all the other elifs and else
+else:
+	#Do these instructions \]
+
+Things to remember about else statements:
+\begin{enumerate}[label=\roman*]
+\item They always come after if statements or elif statements. Never put them before an elif statement
+\item You do not have to put a conditional for an else statement because it catches all other cases
+\end{enumerate}
+
+Applying this to our example:
+
+\begin{script}
+x = input(“Enter a number: ”)
+x = float(x)			     
+
+if x > 5:
+	print(x, “is greater than 5”)
+elif x == 5:
+	print(x, “is equal to 5”)
+else:
+	print(x, “is less than 5”)
+
+print(“Done!”)
+\end{script}
+
+Here is the if-else diagram:
+ 
+\begin{figure}[c]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} 
+% Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+To finish this example, we will do one more thing which is very good to do when dealing with some input (e.g. user input) and returning an output. We will put this all into a function that checks if a number is greater than 5 and call it compare_with_5(x).  Remember that function code must be indented from the line with def so we have to indent everything from the if statement to the end as shown below. We also changed the names of some of  the variables to avoid confusion:
+
+\begin{script}
+user_input = input(“Enter a number: ”)
+user_input = float(user_input)			     
+
+def compare_with_5(x):
+	’’’
+	Compares x with 5
+	x -> number
+	returns None
+	’’’
+	if x > 5:
+		print(x, “is greater than 5”)
+elif x == 5:
+		print(x, “is equal to 5”)
+else:
+		print(x, “is less than 5”)
+	
+print(“Done!”)
+
+compare_with_5(user_input)
+\end{script}
+
+Let’s do one more example. 
+\begin{example} \textbf{Need second short example}
+BLAH
+\end{example}
+
+\begin{toolbox} \textbf{if statements}
+\begin{enumerate}[label=\roman*]
+\item if statement
+\item if and elif statements
+\item if and else statements
+\item if, elif and else statements
+\end{enumerate}
+\end{toolbox}
+
+\begin{exercise} \textbf{If this then that}
+\begin{enumerate}[label=\alph*]
+\item The following function checks if a number is divisible by 2. If a number called n is divisible by 5, this means that n % 5 is zero. The function returns True if the number is divisible by 5 otherwise it returns False. Find the 2 errors in indentation. Type it out with you correction and see if it works. 
+
+\begin{script}
+def is_divisible_by_5(n):
+	’’’
+	Checks if n is divisible by 5
+n -> int
+returns bool
+’’’
+if n % 5 == 0:
+return True
+else:
+return False
+\end{script}
+\item The following script checks asks the user to input their name. If their name is less than 5 characters (e.g. Ben),  it prints “Your name is short”. If your name is between 5 and 8 characters (e.g. Thomas), it prints “Your name is okay”. If your name is longer than 8 characters (e.g. Uvuvuvwevwevwe Onyetenyevwe Ugwemubem Ossas) it prints “You have a long name. Find the errors in indentation and fix them in your own code. Try out this code for yourself.
+
+\begin{script}
+name = input(“What is your name?: “)
+
+if len(name) <= 5:			#Remember len()? (Chap. 3)
+		print(“You have a short name”)
+elif len(name) <= 8 and len(name) > 5:
+		print(“Your name is average length”)
+else:
+		print(“You have a long name”)
+\end{script}
+\item Draw if-else diagrams for the a) and b)
+\item Define a function called is_even(n) that checks if an integer n is even and returns a boolean  if True/False
+\item Write a script that asks the user for a word and then checks if the first letter of that word is in upper/lower case and prints a response. (Hint: Remember indexing  (Chap. 3) and you might find the string method str.is_upper() useful)
+\end{enumerate}
+\end{exercise} 
+
+\begin{exercise} \textbf{Supplementary exercise 5.1}
+\begin{enumerate}[label=\alph*]
+\item You want to help out your school because it takes a long time for teachers to mark so you want to write a script that helps them mark faster which automatically gives you a letter grade for a mark. Define a function that called find_grade(x) that returns a letter grade (e.g. ‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘U’) as a string if x is between certain values, use the values your school uses. (Hint: Draw an if-else diagram first)
+\item Different classes use different cutoffs for As and Bs etc. how would you change your function so that it is easier to set what an A or a B is (Hint: Abstraction)
+\end{enumerate}
+\end{exercise} 
