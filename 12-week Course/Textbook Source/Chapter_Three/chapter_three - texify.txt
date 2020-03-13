@@ -13,7 +13,7 @@ This is your typical example of trying to add apples to oranges. It does not and
 
 \section{Integers}
 
-What is an integer? You might remember what these are from form 1/2 mathematics. Integers are whole numbers with a + or – sign (e.g. 1, 5, -7, 345, 0, -111111). What examples can you give? Python refers to an integer in short as int. Let’s do some operations on integers, you have done
+What is an integer? You might remember what these are from form 1/2 mathematics. Integers are whole numbers with a + or – sign (e.g. 1, 5, -7, 345, 0, -111111). What examples can you give? Python refers to an integer in short as \icd{int}. Let’s do some operations on integers, you have done
 some of these before:
 
 \begin{shell}
@@ -54,7 +54,7 @@ Look at Toolbox 2.1. Which of those operations can give you an answer, which is 
 
 \section{Floating Point Numbers}
 
-We have looked at integers but is it possible to do calculations with just integers? No! We need to have some way of representing fractions and decimals like ½ or 0.3 or π. This is done using what are called floating point numbers. Python refers to a floating point number as a float. They are always represented as decimals. There is no built in way to have an output as ½, it will always be 0.5. The decimal point is always the fullstop/period. Let’s do some examples:
+We have looked at integers but is it possible to do calculations with just integers? No! We need to have some way of representing fractions and decimals like ½ or 0.3 or π. This is done using what are called floating point numbers. Python refers to a floating point number as a \icd{float}. They are always represented as decimals. There is no built in way to have an output as ½, it will always be 0.5. The decimal point is always the fullstop/period. Let’s do some examples:
 
 \begin{shell}
 \begin{enumerate}
@@ -71,9 +71,9 @@ We have looked at integers but is it possible to do calculations with just integ
 
 Notice a few very important things:
 
-Line 2 and 8: Dividing two integers and getting a fraction gives you a float.
-Line 4: Calculations involving a float always gives the answer as a float
-Line 7: Even if it’s an integer to us, if it has a period(.), it will always be considered a float
+Line 2 and 8: Dividing two integers and getting a fraction gives you a \icd{float}.
+Line 4: Calculations involving a float always gives the answer as a \icd{float}.
+Line 7: Even if it’s an integer to us, if it has a period(.), it will always be considered a \icd{float}.
 
 \subsection{Type casting}
 
@@ -103,22 +103,21 @@ Notice how we can change integers to floats and floats to integers using the flo
 
 \item
 \begin{enumerate}[label=\roman*]
-\item Declare a variable x as your favourite integer.
-\item Check the type of x.
-\item Declare a variable y as x+1/3.0. What is its type?
-\item Convert x into a float and check its type.
+\item Declare a variable \icd{x} as your favourite integer.
+\item Check the type of \icd{x}.
+\item Declare a variable \icd{y} as \icd{x}+1/3.0. What is its type?
+\item Convert \icd{x} into a \icd{float} and check its type.
 \end{enumerate}
 \end{enumerate}
 \end{exercise}
-____________________________________________________________________________
-1 In older versions of Python, this would give you zero because they swapped division (/) and floor division (//)
-2 In fact, most other programming languages do not allow you to declare a variable without specifying the
-exact type it is going to be. Python allows your variable to store anything, this is called “dynamic typing”
-____________________________________________________________________________
+
+\footnote{In older versions of Python, this would give you zero because they swapped division (/) and floor division (//)}
+\footnote{In fact, most other programming languages do not allow you to declare a variable without specifying the
+exact type it is going to be. Python allows your variable to store anything, this is called “dynamic typing”}
 
 \section{Strings}
 
-A string is the data type used by Python to represent text/characters. A character is simply any letter of the alphabet or any symbol or any punctuation including a space. This has to be different from variables. Strings are represented by putting them in quotation marks e.g. ‘Hello World’ or “Python”. Strings in Python are represented as str. Let’s practice making strings:
+A \icd{string} is the data type used by Python to represent text/characters. A character is simply any letter of the alphabet or any symbol or any punctuation including a space. This has to be different from variables. Strings are represented by putting them in quotation marks e.g. ‘Hello World’ or “Python”. Strings in Python are represented as \icd{str}. Let’s practice making strings:
 
 \begin{shell}
 ‘This is a string’
@@ -204,10 +203,8 @@ w[:] #this is how you copy the entire string(^3)
 
 If you add a second colon, you can change the order by using a ‘-1’ to reverse the order.
 
-____________________________________________________________________________
-3 Copying is different from assigning a new variable to the old one because the new value stored in a new lace
-in memory.
-____________________________________________________________________________
+\footnote{Copying is different from assigning a new variable to the old one because the new value stored in a new lace
+in memory.}
 
 \begin{shell}
 t = ‘abcde’
@@ -234,7 +231,7 @@ s.index(‘h’)
 s.count(‘e’) #Gives the number of occurrences of ‘e’
 \end{shell}
 
-To get a full list of all the methods you can use on strings you can go to the python documentation. You can go to the shell and execute help(str). If you find it difficult to read, in IDLE you can go to Help > Python Docs > The Python Standard Library > Built-in Types > Text Sequence Type –str > String Methods. I encourage you to look at the documentation.
+To get a full list of all the methods you can use on strings you can go to the python documentation. You can go to the shell and execute help(\icd{str}). If you find it difficult to read, in IDLE you can go to Help > Python Docs > The Python Standard Library > Built-in Types > Text Sequence Type –str > String Methods. I encourage you to look at the documentation.
 
 \begin{toolbox} \textbf{Strings}
 \begin{enumerate}
@@ -254,7 +251,7 @@ To get a full list of all the methods you can use on strings you can go to the p
 
 \section{Boolean types}
 
-To help you make decisions you often need one of two answers, “yes” or “no." This allows you to know when to do something and when not to do something. Similarly, a computer must have something that works the same to know if the answer to some question is “yes” or “no." What are other pairs of words that mean “yes” or “no?" Python has a special data type that only takes 2 values, True or False. A boolean type can never be any other value, only those two. Notice that in Python, the first letter of True and False must be in upper case (capital letters).
+To help you make decisions you often need one of two answers, “yes” or “no." This allows you to know when to do something and when not to do something. Similarly, a computer must have something that works the same to know if the answer to some question is “yes” or “no." What are other pairs of words that mean “yes” or “no?" Python has a special data type that only takes 2 values, \icd{True} or \icd{False}. A boolean type can never be any other value, only those two. Notice that in Python, the first letter of \icd{True} and \icd{False} must be in upper case (capital letters).
 
 \begin{shell}
 True
@@ -305,21 +302,21 @@ Write down the answers to these comparison tests and then check if you were corr
 \begin{enumerate}[label=\roman*]
 \item  789 > 789.1 
 \item  3 != min(3,4) 
-\item int(3.4) == 3 
+\item  \icd{int}(3.4) == 3 
 \item  (9//4) >= (12%5) 
-\item  str(3) != ‘three’
+\item  \icd{str}(3) != ‘three’
 \end{enumerate}
 \end{exercise}
 
 \begin{toolbox} \textbf{Logical operators and chaining comparison tests}	
-Let’s add a few more things to our toolbox. What if we want to check many things for example, I will only go to school if all the following things are True:
+Let’s add a few more things to our toolbox. What if we want to check many things for example, I will only go to school if all the following things are \icd{True}:
 
 and: If I have my books and if it is not raining – if I don’t have my books I won’t go even if it’s not raining, if it’s not raining I won’t go even if I have my books.
 
 or: If I have my books or if it is not raining – if I have my books I will go even if it is raining. If it is not raining I will go even if I do not have my books.
 
 in: Used to check if a shorter string is in a longer string^(4)
-not: This takes the opposite of whatever you put in front of it e.g. not 1>3 is True
+not: This takes the opposite of whatever you put in front of it e.g. not 1>3 is \icd{True}
 \end{toolbox}
 
 Let’s do some examples:
@@ -342,17 +339,17 @@ not True
 \item Evaluate the following tests manually and then confirm them in a shell
 \begin{enumerate}[label=\roman*]
 \item  4 != (3 or 4) 
-\item  ‘3’ == str(3.0) 
+\item  ‘3’ == \icd{str}(3.0) 
 \item  347 > 5*45 
 \item  5 > len(‘Python’) 
 \item  ‘te’ in ‘tea’
 \end{enumerate}
-\item The function random.random() gives a random float between 0 and 1. Simply use it the same
+\item The function random.random() gives a random \icd{float} between 0 and 1. Simply use it the same
 way you would use max/min but make sure the brackets (parentheses) are empty.
 \begin{enumerate}[label=\roman*]
 \item Import the library random. The same way we did with math in Chapter 2
 \item Test the function random.random() by typing it into the shell
-\item Declare three variables x, y and z as random numbers between 0 and 1
+\item Declare three variables \icd{x}, \icd{y} and \icd{z} as random numbers between 0 and 1
 \item Use the comparison operators (>, < and ==) to find out which one is the biggest and smallest
 number.
 \item Confirm your answer using the max/min function
@@ -383,9 +380,7 @@ print(type(Y)) #Tells you what type Y is
 
 You can even do this in the shell after running because Python stores all the declared variables
 before the error.
-____________________________________________________________________________
-4 This more generally checks if an object is inside a data structure. We will see this in chapter 8
-____________________________________________________________________________
+\footnote{This more generally checks if an object is inside a data structure. We will see this in chapter 8}
 
 A common source of this error is when using the input() function. The input function always returns (gives you) a string so if you want to do calculations with the input value you have to type cast it into
 a number. Write the following code to understand the source of the error.
@@ -413,7 +408,7 @@ print(x*y)
 \begin{enumerate}[label=\roman*]
 \item Ask the user how many people are coming to the party and store it in a variable (Remember to
 name this variable so that it is easy to understand what it stands for and what type it should be).
-\item Declare a variable called price and set it to 10
+\item Declare a variable called \icd{price} and set it to 10
 \item Make Python print out how much money you are going to make, make sure there is some text
 so that you understand what the output is, not just a number.
 \end{enumerate}

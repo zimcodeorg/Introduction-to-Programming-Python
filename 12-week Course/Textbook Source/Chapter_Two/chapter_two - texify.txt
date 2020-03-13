@@ -23,7 +23,7 @@ Now, we can calculate any distance given any speed and any time. This is what we
 abstraction. Rather than using an event (i.e. exact numbers) we use an idea (i.e. a formula).
 \end{example}
 
-\begin{exercise} \textbf{Supplementary Exercise 2.1 (Science) – Making a complicated calculation easy}
+\begin{exercise} \textbf{Science – Making a complicated calculation easy}
 Imagine that you are the assistant to a crazy physicist named Larmour who needs to know the power
 radiated from a point (The point is that this is a complicated calculation, you do not even need to
 know what it means). Larmour says he wrote his formula on the board and needs the answer to
@@ -76,7 +76,7 @@ In the shell, execute (type it then press enter) the following code:
 \item print(x+y)
 \item x = y
 \item print(y)
-\item name = “Python”         #You can put your own name here
+\item name = “Python”       #You can put your own name here
 \item print(name)
 \end{enumerate}
 \end{shell}
@@ -85,8 +85,7 @@ Notice how the letter “x” now stands for 3 and “y” stands for 4 and you 
 to numbers to x and y because x and y actually represent the numbers in the calculation.
 \end{exercise}
 
-\section{Demonstration: Let’s be variables!}
-
+\begin{example} \textbf{Let’s be variables!}
 This is a good chance to learn everyone’s name. Everyone in the class will be a variable called by
 their name, there will be someone who is an operator and the tutor will be the interpreter
 (Python). Each person will get a piece of paper (this is the “memory”) with a number on it whenever
@@ -107,6 +106,7 @@ called x and checks the person called y and shouts the answer.
 
 Shout at a few instructions declaring people as variables, printing variables, exchanging variables and
 adding/subtracting variables and assigning them to new ones etc. Have fun!
+\end{example}
 
 \begin{exercise} \textbf{Python Siri}
 \begin{enumerate}[label=\alph*]
@@ -114,8 +114,8 @@ adding/subtracting variables and assigning them to new ones etc. Have fun!
 for the user’s name using input() and then asks for the age and then prints out a greeting that
 says “Hi, [name], you are [age] years old” where [name] is replaced by the person’s name and
 [age] is replaced by the person’s age. Think about what variables you can use and how you would
-name them
-\item Write a script that exchanges the values of two variables x and y. Think about the demonstration
+name them.
+\item Write a script that exchanges the values of two variables \icd{x} and \icd{y}. Think about the demonstration
 you saw/did and how you would do it in the demonstration and do it in code using only three
 lines. (Hint: You can use as many variables as you want)
 \end{enumerate}
@@ -130,24 +130,24 @@ are some rules for naming variables, the first 5 rules are not optional, you wil
 them wrong.
 
 \begin{enumerate}
-\item Never use python keywords (e.g. print, def, import etc.) Basically, if the word changes colour
+\item Never use python keywords (e.g. \icd{print}, \icd{def}, \icd{import} etc.) Basically, if the word changes colour
 when you type it, do not use it as a variable.
-\item Do not use the name of a module you have imported (e.g. math), if you import something,
-its name has been taken, you should not use it for a variable.
+\item Do not use the name of a module you have imported (e.g. math). If you import something, its name has been taken, 
+you should not use it for a variable.
 \item Do not use any punctuation except underscores (_ or Shift + -) in your variable names.
 \item Do not use spaces in your variables, if you want to have a space, use an underscore (_) e.g.
 two_words.
-\item Your variable name should never start with a number (e.g. 1st_variable)
-\item Give your variables names that anyone can understand (e.g. name, age, number_of_cats)
-\item If your variable is going to be changing, use only lower case letters e.g. cost_of_food.
+\item Your variable name should never start with a number (e.g. \icd{1st_variable}).
+\item Give your variables names that anyone can understand (e.g. \icd{name}, \icd{age}, \icd{number_of_cats}).
+\item If your variable is going to be changing, use only lower case letters e.g. \icd{cost_of_food}.
 \item If your variable is just a number that you input once at the beginning of the document use all
-upper case letters e.g. NUM_WHEELS_ON_CAR.
+upper case letters e.g. \icd{NUM_WHEELS_ON_CAR}.
 \end{enumerate}
 
 \section{Python keywords and Comments}
 
 Python has special words that mean special things, you can always see a keyword by the way it
-changes colour when you type it in e.g. if, import, elif, print etc. These should never be used as
+changes colour when you type it in e.g. \icd{if}, \icd{import}, \icd{elif}, \icd{print} etc. These should never be used as
 variable names.
 
 We say Python is human readable but sometimes our code gets complicated and someone who did
