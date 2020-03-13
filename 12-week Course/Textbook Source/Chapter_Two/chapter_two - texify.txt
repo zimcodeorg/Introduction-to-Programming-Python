@@ -29,7 +29,7 @@ radiated from a point (The point is that this is a complicated calculation, you 
 know what it means). Larmour says he wrote his formula on the board and needs the answer to
 finish making a machine that gets rid of all homework so you happily help him. The formula is:
 
-\begin{figure}[a]
+\begin{figure}[h]
 \centering\includegraphics[scale=0.5]{placeholder.jpg}
 \caption{Missing figure}
 \label{fig:placeholder} % Unique label used for referencing the figure in-text
@@ -172,7 +172,7 @@ grammar, spelling and punctuation are the syntax of the English language. Simila
 bit of code that you type must follow the syntax of Python otherwise you will get a syntax error like
 the one below when you forget to close the bracket.
 
-\begin{figure}[b]
+\begin{figure}[h]
 \centering\includegraphics[scale=0.5]{placeholder.jpg}
 \caption{Missing figure}
 \label{fig:placeholder} % Unique label used for referencing the figure in-text
