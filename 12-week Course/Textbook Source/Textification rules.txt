@@ -40,7 +40,7 @@ Variables and keywords in the text, Do this especially for anythin that has _ in
 ==========================================================================
 The variable num_guesses is an int
 -----------------------------------------becomes
-The \icd{num_guesses} is an \icd{int}
+The variable \icd{num_guesses} is an \icd{int}
 ========================================================================
 Toolboxes
 ==========================================================================
