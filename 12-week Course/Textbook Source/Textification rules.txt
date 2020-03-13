@@ -7,6 +7,15 @@ General Rules:
 3. Put the descriptions of figures in the brackets of caption (see figures below) \caption{}
 4. Demonstrations are now deprecated since this is now a student book, for now treat them as examples and I will 
 try and turn them into examples.
+5. Treat all supplementary exercises as exercises
+6. Wrap all code, keywords and variable names and inline code in the \icd{} tag i.e. all of import, def, x, for, num_guesses etc. It will do the syntax highliting automatically
+========================================================================
+Footnotes
+==========================================================================
+The text in the footnote is inside the parentheses. (This is the footnote)
+-----------------------------------------becomes
+The text in the footnote is inside the parentheses. \footnote{This is the footnote}
+
 ========================================================================
 Chapter Title
 ==========================================================================
