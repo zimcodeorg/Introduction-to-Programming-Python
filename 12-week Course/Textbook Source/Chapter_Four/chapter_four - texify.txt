@@ -44,13 +44,13 @@ def function_name(parameters):
 All the things in bold must always be there when defining a function. Here is a checklist for writing functions:
 
 \begin{itemize}
-\item def is a Python keyword like import, it tells Python that you are about to define a function. As with other keywords it should never be used as a variable name.
-\item function_name can be replaced by anything that you want to name your function. The rules for naming a function are the same as for variables but we never really use upper case letters as this might confuse some readers.
+\item def is a Python keyword like \icd{import}, it tells Python that you are about to define a function. As with other keywords it should never be used as a variable name.
+\item \icd{function_name} can be replaced by anything that you want to name your function. The rules for naming a function are the same as for variables but we never really use upper case letters as this might confuse some readers.
 \item The parentheses () must always be included, this is where we put the parameters, which are usually variables. If the function does not need any parameter, we leave them empty but they should always be there.
 \item The colon (:) is very important and should never be left out. A lot of beginners forget the colon and this causes lots of errors. You have been warned. There are many more situations where we will use a colon. A colon means that the next line should be indented.
 \item Indentation – The function code and return statement should always be indented from the
-line of the def keyword. Indentation is just a blank space made using one TAB button on the keyboard. This is the most common source of error from beginners especially when they start writing longer code. We encourage you to do the indentation exercises.
-\item For the function code, we can write any instructions that we want e.g. print(‘Hello’) etc.
+line of the \icd{def} keyword. Indentation is just a blank space made using one TAB button on the keyboard. This is the most common source of error from beginners especially when they start writing longer code. We encourage you to do the indentation exercises.
+\item For the function code, we can write any instructions that we want e.g. \icd{print}(‘Hello’) etc.
 \item return is another keyword but it is optional, we include it when we want the function to give us back something like an answer to a calculation or some string etc. 
 \end{itemize}
 
@@ -186,7 +186,7 @@ print(is_even(3))
 \end{example}
 
 There is something important you should notice, this is the difference between the print() function and the return statement. The print() function inside your function just prints things to output, it does not store them anywhere and they cannot be used for calculations or for some other purpose.
-The return value is a value that we can do anything for example if the area of a circle is 5, we can do whatever we want with it. We can store it in a variable called area or multiply it by 7 or we can do what we did in the last example and print it. It is more useful to use return statements and then print outside the function and it is encouraged that you do this unless we say otherwise.
+The return value is a value that we can do anything for example if the area of a circle is 5, we can do whatever we want with it. We can store it in a variable called \icd{area" or multiply it by 7 or we can do what we did in the last example and print it. It is more useful to use return statements and then print outside the function and it is encouraged that you do this unless we say otherwise.
 
 This is the last chapter in the first section to do with abstraction and data types. The two ways we have learned how to abstract is through the use of variables where make formulas so that we can do a calculation for different values easily. The second form of abstraction is the use of functions which allow us too write a set of instructions that work for one input to work over and over again for many inputs without us having to rewrite all the code all the time.
 
@@ -225,8 +225,8 @@ print(h(2,3))
 \item Define a function called hello_world that prints out the string “Hello World”. (Does it need a
 parameter?)
 \item Define a function that prints out any string it gets as a parameter in capital letters and
-returns None
-\item Define a function that checks if a parameter x is divisible by 6.
+returns \icd{None}
+\item Define a function that checks if a parameter \icd{x} is divisible by 6.
 \item Define a function that calculates the volume of a square of any side.
 \item Define a function that calculates the area of a rectangle (How many parameters do you
 need?)
