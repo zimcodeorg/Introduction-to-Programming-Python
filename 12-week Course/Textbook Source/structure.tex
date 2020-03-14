@@ -259,6 +259,7 @@
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
+\newtheorem{toolboxT}[dummy]{Toolbox}
 \newtheorem{problem}{Problem}[chapter]
 \newtheorem{exerciseT}{Exercise}[chapter]
 \theoremstyle{blacknumex}
@@ -340,6 +341,7 @@ innerbottommargin=5pt]{cBox}
 
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
+\newenvironment{toolbox}{\begin{tBox}\begin{toolboxT}}{\end{toolboxT}\end{tBox}}
 \newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
@@ -557,6 +559,9 @@ addtohook={%
                frame=lines,
                framesep=2mm]{python}}
 {\end{minted}}
+
+%Inline code
+\newcommand{\icd}[1]{\textbf{#1}}
 
 %----------------------------------------------------------------------------------------
 %	TEXT FORMATTING
