@@ -1,247 +1,36 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
-\chapter{Introduction to Computers and Programming}
+\chapter{Introduction}
 
-\section{Paragraphs of Text}\index{Paragraphs of Text}
-Blah blah blah
+\section{What is Zim Code?}
 
-%------------------------------------------------
+Zim Code is a nonprofit coding school that was founded by Alvin Chitena in 2016. Our mission at Zim Code is to bringing coding to the forefront of youth education and empowerment in Zimbabwe. Code is the language of the present and the future, and so we believe that it is necessary for everyone to have the opportunity to learn it. Zim Code is made of young and dedicated Zimbabweans from all walks of life who are passionate about coding, education, entrepreneurship and philanthropy. 
 
-\section{Citation}\index{Citation}
+Given the vast socio-economic issues that plague Zimbabwe, we see it necessary to remove the many barriers that people may face when trying to learn how to code, namely quality information and resources. This course, the Introduction to Programming: Python (12-weeks) is one of the many initiatives we are spearheading to further our mission.
 
-This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+To find out more about Zim Code, visit our website: www.zimcode.org
 
-%------------------------------------------------
+\section{Purpose of the textbook}
 
-\section{Lists}\index{Lists}
+This text is designed to cater specifically to high school students in Zimbabwe and other African
+countries whose education system is based on the GCE A level curriculum. The idea is to
+provide a low barrier text in writing that is easy to understand for African high school students with very little assumptions made about their background. 
 
-Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+A wide range of relatable examples are used throughout the text to provide analogies and help students grasp the abstract concepts in Computer Science and Programming. This is done with the hope that students may begin to appreciate how Computer Scientists and Software Engineers solve problems and how programming skills can be applied in the real world.
 
-\subsection{Numbered List}\index{Lists!Numbered List}
+In addition to learning the basics of coding, students will also inevitably learn and improve in other subject areas. The link between Computer Science and Mathematics is undeniable and in fact, fundamental. While it is easy to fall into the temptation of providing mostly computational and mathematical examples, we tried our best to include a wide range of examples appealing to 
+all three major fields of study: Science, Commerce and Humanities. 
 
-\begin{enumerate}
-\item The first item
-\item The second item
-\item The third item
-\end{enumerate}
+This course will give a 12-week introduction to programming in Python which is one of the most accessible languages to beginners due to its similarity to written English and white space delimiting. White space delimiting is the use of indentations and line 
+breaks rather than brackets to group code blocks e.g. in a function/loop. Python is also a very powerful tool in computation (The NumPy package is used in various fields for numerical computation) and web design (Instagram is written in Django/Flask, Python frameworks) 
+with a very good support and development network. It is also easy to install and is often preinstalled on most operating systems (unfortunately, not on Windows).
 
-\subsection{Bullet Points}\index{Lists!Bullet Points}
+An important part of this text is that it should be fun and interactive to the students. This text is "minimal" in that to benefit the most out of the content, the reader has to go through all the readings, examples and exercises. It involves live demoes and even tries to introduce real world applications early on. Examples are chosen from real world problems so that it becomes immediately apparent to the students how programming applies to real life.
+Students will also learn a lot of broader concepts in programming such as abstraction, functional programming, and algorithmic thinking.
 
-\begin{itemize}
-\item The first item
-\item The second item
-\item The third item
-\end{itemize}
+This course is designed to be open, fun and interactive. We encourage deviating from the standard lecture model because the best way to learn programming is by actually doing it. The style will be a combination of lecture and lab type classes where a concept is introduced for 
+a few minutes, the students get to use it and then reflection on the use of the concept will hopefully bring to light its value and clear any misconceptions. 
 
-\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+While we provide a detailed lesson plan to teachers in addition to this textbook, experimentation and flexibility is encouraged so that the most can be made from every class. If something does not work particularly well, change it and if the teacher has better ways of teaching the class in their context, they should. 
 
-\begin{description}
-\item[Name] Description
-\item[Word] Definition
-\item[Comment] Elaboration
-\end{description}
-
-\section{Theorems}\index{Theorems}
-
-This is an example of theorems.
-
-\subsection{Several equations}\index{Theorems!Several Equations}
-This is a theorem consisting of several equations.
-
-\begin{theorem}[Name of the theorem]
-In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{theorem}
-
-\subsection{Single Line}\index{Theorems!Single Line}
-This is a theorem consisting of just one line.
-
-\begin{theorem}
-A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
-\end{theorem}
-
-%------------------------------------------------
-
-\section{Definitions}\index{Definitions}
-
-This is an example of a definition. A definition could be mathematical or it could define a concept.
-
-\begin{definition}[Definition name]
-Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
-\begin{align}
-& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
-& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
-& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
-\end{align}
-\end{definition}
-
-%------------------------------------------------
-
-\section{Notations}\index{Notations}
-
-\begin{notation}
-Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
-\begin{enumerate}
-\item Bounded support $G$;
-\item Infinitely differentiable;
-\end{enumerate}
-a vector space is denoted by $\mathcal{D}(G)$. 
-\end{notation}
-
-%------------------------------------------------
-
-\section{Remarks}\index{Remarks}
-
-This is an example of a remark.
-
-\begin{remark}
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{remark}
-
-%------------------------------------------------
-
-\section{Corollaries}\index{Corollaries}
-
-This is an example of a corollary.
-
-\begin{corollary}[Corollary name]
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{corollary}
-
-%------------------------------------------------
-
-\section{Propositions}\index{Propositions}
-
-This is an example of propositions.
-
-\subsection{Several equations}\index{Propositions!Several Equations}
-
-\begin{proposition}[Proposition name]
-It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{proposition}
-
-\subsection{Single Line}\index{Propositions!Single Line}
-
-\begin{proposition} 
-Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
-\end{proposition}
-
-%------------------------------------------------
-
-\section{Examples}\index{Examples}
-
-This is an example of examples.
-
-\subsection{Equation and Text}\index{Examples!Equation and Text}
-
-\begin{example}
-Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-\begin{equation}
-f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-\end{equation}
-The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
-\end{example}
-
-\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
-
-\begin{example}[Example name]
-\lipsum[2]
-\end{example}
-
-%------------------------------------------------
-
-\section{Exercises}\index{Exercises}
-
-This is an example of an exercise.
-
-\begin{exercise}
-This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
-
-%------------------------------------------------
-
-\section{Problems}\index{Problems}
-
-\begin{problem}
-What is the average airspeed velocity of an unladen swallow?
-\end{problem}
-
-%------------------------------------------------
-
-\section{Vocabulary}\index{Vocabulary}
-
-Define a word to improve a students' vocabulary.
-
-\begin{vocabulary}[Word]
-Definition of word.
-\end{vocabulary}
-
-\section{Figure}\index{Figure}
-
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{placeholder.jpg}
-\caption{Figure caption}
-\label{fig:placeholder} % Unique label used for referencing the figure in-text
-%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Referencing Figure \ref{fig:placeholder} in-text automatically.
-
-\section{Table}\index{Table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\label{tab:example} % Unique label used for referencing the table in-text
-%\addcontentsline{toc}{table}{Table \ref{tab:example}} % Uncomment to add the table to the table of contents
-\end{table}
-
-\section{Code}
-
-If code is in a file you can use
-
-\inputminted{python}{Introduction/code.py}
-
-Note that the path must be relative to the main.tex directory\\
-\newline
-For one line code
-
-\mint{html}|<h2>Something <b>here</b></h2>|
-
-For a python script
-
-\begin{script}
-def f():
-	return True
-\end{script}
-
-For a python shell
-
-\begin{shell}
-'1' in '4521'
-\end{shell}
-
-For a cmd prompt
-
-\begin{cmd}
-dir
-cd
-cd ..
-\end{cmd}
+We would like feedback on what worked and what didn’t, if you have any, email info@zimcode.org
