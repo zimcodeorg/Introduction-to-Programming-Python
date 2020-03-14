@@ -1,0 +1,234 @@
+\Chapter{Introduction to functions}
+
+We have been using functions all along, for example, the print() function. What other functions have we used? How do you know it’s a function?- parantheses (round brackets). In this chapter, we will try and explain what a function is and how we can write our own. A function is basically some code that was written before so that we can use it over and over again. The print function is actually more than 100 lines of code. Imagine having to write out all that code every time you wanted to print some output! Instead, all we have to do is call the print function and it will do the job. 
+
+To help make a clearer picture, let’s go back to Ordinary Level mathematics where you have defined functions before. Defining a function is writing down the instructions that must be carried out and giving them a name. For example:
+
+[\ f(x) = 2*x + 1 \]
+
+Here we have defined a function called f which takes in a number (parameter) called x and gives you the answer to 2*x + 1. Now we can use this function on any number by replacing x with that number. For example:
+
+[\ f(1) = 3
+f(0) = 1
+f(2) = 5 etc. \]
+
+We can even have a function called add(x,y) which adds two numbers x and y by defining:
+
+[\ add(x, y) = x + y \]
+
+That way, add(1, 2) = 3
+
+Every function (in mathematics or programming) has 3 parts:
+\begin{enumerate}
+\item Parameters (input) – These are the things inside the parantheses (brackets). They are the things that a function needs to do its job. For example, if you say add() with nothing inside the parantheses, the function does not know what to do and will ‘give an error’. Knowing the data type of the parameter is very important because most functions only work for one data type.
+\item Function code (processing) – These are the instructions that the function must follow, these can take any form, it can be any of the coding we have been doing before. In the above example, the function code is 2*x + 1 or x + y.
+\item Return Value (output) – This is the final answer after all the calculations are done, for example the return value for f(1) is 3. Again knowing the return value’s type is important in case we want to use it somewhere else.
+\end{enumerate}
+
+It’s not a coincidence that functions have all three parts of our basic computer model (input, processing and output).
+
+\begin{exercise} \textbf{Defining a function}
+\begin{enumerate}[label=\alph*]
+\item Define a mathematical function called mult which multiplies three numbers x, y, and z.
+\end{enumerate}
+\end{exercise}
+
+We will now learn how to define functions in Python. Functions generally take the following form:
+
+\begin{script}
+def function_name(parameters):
+    #Function code/statements
+    return value
+\end{script}
+
+All the things in bold must always be there when defining a function. Here is a checklist for writing functions:
+
+\begin{itemize}
+\item def is a Python keyword like \icd{import}, it tells Python that you are about to define a function. As with other keywords it should never be used as a variable name.
+\item \icd{function_name} can be replaced by anything that you want to name your function. The rules for naming a function are the same as for variables but we never really use upper case letters as this might confuse some readers.
+\item The parentheses () must always be included, this is where we put the parameters, which are usually variables. If the function does not need any parameter, we leave them empty but they should always be there.
+\item The colon (:) is very important and should never be left out. A lot of beginners forget the colon and this causes lots of errors. You have been warned. There are many more situations where we will use a colon. A colon means that the next line should be indented.
+\item Indentation – The function code and return statement should always be indented from the
+line of the \icd{def} keyword. Indentation is just a blank space made using one TAB button on the keyboard. This is the most common source of error from beginners especially when they start writing longer code. We encourage you to do the indentation exercises.
+\item For the function code, we can write any instructions that we want e.g. \icd{print}(‘Hello’) etc.
+\item return is another keyword but it is optional, we include it when we want the function to give us back something like an answer to a calculation or some string etc. 
+\end{itemize}
+
+Let us write the add(x, y) function in a Python script:
+
+\begin{script}
+def add(x,y):
+    answer = x + y
+    return answer
+\end{script}
+
+Go through the checklist above and make sure everything is included. To use our function, we have to “call” it, just writing down the function will not make it do anything. This is how we call a function, below the above line add the following line:
+
+\begin{script}
+def add(x,y):
+    answer = x + y
+    return answer
+
+print(add(1,1))
+\end{script}
+
+def function_name(parameters):
+#Function code/statements
+return value
+
+Notice that when we are done defining the function, our next line of code is not indented from the def line, this is how Python knows you have finished defining your function. What happens here is that the function add is called with parameters 1 and 1 and then it adds them and returns the answer which is 2 and then it prints the answer. Why does the following code not print anything?
+
+\begin{exercise} \textbf{f of x}
+\begin{enumerate}[label=\alph*]
+\item Why does the following code give an error?
+\begin{script}
+def f(x)
+    return x + 3
+
+print(f(3))
+\end{script}
+\item Why does the following code give an error?
+\begin{script}
+def g(x):
+    return x + 3
+
+print(f(3))
+\end{script}
+\item Why does the following code not print anything to output?
+\begin{script}
+def h(x):
+    return 2*x + 3
+\end{script}
+\item Write the following function in Python and check that it works: 
+[\ i(x) = 9*x + x**2 \]
+\item Write a function that subtracts x from y (finds y - x) and returns the answer.
+\end{enumerate}
+
+Let’s write a few more functions as practice to show that functions are not mathematical only, they can do anything that can be written in code. Below is code that takes a string called name as a parameter and then whatever the string is, it makes it all lower case and then capitalizes the first
+letter. This might be useful for example if you want Python to write someone’s name properly. First let’s do this without a function:
+
+\begin{script}
+name = “ben”
+name = name.capitalize()
+print(name)
+\end{script}
+
+Run the above script to see what it does. Change the name e.g. put upper case letters or something crazy to see that it always gives you the string with only the first letter capitalized. 
+
+Imagine if you had to do this 10 times in your code i.e. you had to declare 10 variables for the 10 names you wanted to capitalize and you had to write those 4 lines of code 10 times. It would be messy and boring. Here is a golden rule in programming that is written in bold because it is very important:
+
+
+             \textbf{Never write the same code more than once}
+
+If you see yourself doing this, it’s a sign that you should use a function. Let’s do it below:
+
+\begin{script}
+def cap_name(name):
+    name = name.capitalize()
+    print(name)
+
+cap_name(“ben”)
+\end{script}
+
+Now we have solved the problem and we never need to solve it again, all we need to do is to call the cap_name() function.
+
+Let’s do a few more examples just to get used to defining functions. The description of what the function does is written in green inside the three quotation marks (‘’’). You do not need to type this for your function to work, it is called a docstring and when you get used to defining functions you should always write your own, so that people reading your code can understand what it does.
+
+\begin{example} \textbf{Example 1 has no title}
+\begin{script}
+def division(x,y):
+    ’’’
+    Takes a number x and divides it by then it prints the
+    result of floor division and the remainder
+    x -> number
+    y -> number
+    returns None #This means there is no return statement
+    ’’’
+    quotient = x // y
+    rem = x % y
+    print(quotient, “remainder”, rem)
+    division(14,5) #This is to test the function, you can put
+                   #any numbers, numbers only.
+\end{script}
+\end{example}
+
+\begin{example} \textbf{Example 2 has no title}
+\begin{script}
+def circle_area(radius):
+    ’’’
+    Calculates the area of a circle with a radius given by
+    the variable “radius”
+    radius -> number
+    returns -> float
+    ’’’
+    import math
+    area = math.pi * (radius ** 2)
+    return area
+print(circle_area(3)) #Check that this is the area of a circle
+                      #with radius 3
+\end{script}
+\end{example}
+
+\begin{example} \textbf{Example 3 has not title}
+\begin{script}
+def is_even(x):
+    ’’’
+    Checks to see if the number x is even. This is the same as
+    checking if it is divisible by 2
+    x -> number
+    returns bool
+    ’’’
+    return (x%2) == 0
+
+print(is_even(2))
+print(is_even(3))
+\end{script}
+\end{example}
+
+There is something important you should notice, this is the difference between the print() function and the return statement. The print() function inside your function just prints things to output, it does not store them anywhere and they cannot be used for calculations or for some other purpose.
+The return value is a value that we can do anything for example if the area of a circle is 5, we can do whatever we want with it. We can store it in a variable called \icd{area" or multiply it by 7 or we can do what we did in the last example and print it. It is more useful to use return statements and then print outside the function and it is encouraged that you do this unless we say otherwise.
+
+This is the last chapter in the first section to do with abstraction and data types. The two ways we have learned how to abstract is through the use of variables where make formulas so that we can do a calculation for different values easily. The second form of abstraction is the use of functions which allow us too write a set of instructions that work for one input to work over and over again for many inputs without us having to rewrite all the code all the time.
+
+\begin{exercise} \textbf{That was not my inden(ta)tion}
+\begin{enumerate}[label=\alph*]
+\item All of the following code snippets have one problem with syntax (in this case, indentation),
+find it.
+\begin{enumerate}[label=\roman*]
+\item
+\begin{script}
+def say_hi():
+    answer = “Hi”
+    return answer
+
+print(say_hi())
+\end{script}
+\item
+\begin{script}
+def my_upper(text):
+    return text.upper()
+    print(my_upper(“Hi”))
+\end{script}
+\item
+\begin{script}
+def f(x,y):
+    def g(z):
+    return z + 1
+    
+    return x * g(y)
+
+print(h(2,3))
+\end{script}
+\end{enumerate}
+
+\item Explain what each of the above functions does and then fix them and try them out.
+\item Define a function called hello_world that prints out the string “Hello World”. (Does it need a
+parameter?)
+\item Define a function that prints out any string it gets as a parameter in capital letters and
+returns \icd{None}
+\item Define a function that checks if a parameter \icd{x} is divisible by 6.
+\item Define a function that calculates the volume of a square of any side.
+\item Define a function that calculates the area of a rectangle (How many parameters do you
+need?)
+\end{enumerate}
+\end{exercise}
