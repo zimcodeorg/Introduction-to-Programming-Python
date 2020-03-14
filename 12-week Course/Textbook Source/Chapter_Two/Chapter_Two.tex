@@ -1,0 +1,389 @@
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Variables}
+
+\section{Abstraction}
+
+So far, we have only been considering things that an ordinary calculator can do with just a few simple
+operations. The first and probably the most powerful tool in programming is abstraction. Abstraction
+is the use of an idea rather than an event. This is best shown through examples.
+
+\begin{example} \textbf{Using a formula}
+If I were to tell you that to calculate the distance travelled by a car I did the following calculation:
+
+\[ distance = 2 * 3 = 6 \]
+
+Is it possible for you to know how I did it? What is 2? What is 3? What units did I use? Is it 6 metres
+per second or 6 kilometres per minute? Clearly this is not useful if I want to learn how to calculate
+distance by myself. How do we know how to calculate distance? 
+
+The answer is that we know the formula:
+
+\[ distance = speed * time \]
+
+Now, we can calculate any distance given any speed and any time. This is what we mean by
+abstraction. Rather than using an event (i.e. exact numbers) we use an idea (i.e. a formula).
+\end{example}
+
+\begin{exercise} \textbf{Science – Making a complicated calculation easy}
+
+Imagine that you are the assistant to a crazy physicist named Larmour who needs to know the power
+radiated from a point (The point is that this is a complicated calculation, you do not even need to
+know what it means). Larmour says he wrote his formula on the board and needs the answer to
+finish making a machine that gets rid of all homework so you happily help him. The formula is:
+\[ P=\frac{e^2a^2}{6\pi\epsilon_0c^3}\]
+He also wrote what number each of the symbols is:
+
+\begin{align*}
+e &= 1.6\times 10^{-19} \\
+a &= 1\\
+\epsilon_0 &= 8.85418782\times 10^{-12}\\
+c &= 3\times 10^8\\
+\end{align*}
+
+\begin{enumerate}[label=\roman*]
+\item What is P? The point is that you can calculate a very complicated thing just because you know the
+formula or because Larmour “abstracted” the idea.
+\item Suppose Larmour says he made a mistake and a is actually 2, how do you use your answer from i)
+to fix this easily?
+\end{enumerate}
+\end{exercise}
+
+\section{Variables}
+Let’s go back to the example with distance where we have:
+
+$$ distance = speed * time $$
+
+We have multiplied before so we know what the “*” does. There are two new things i.e. the three words and the “=” sign. The three words are called variables, which has the same meaning as in mathematics. Variables are containers that hold something e.g. “time” holds the number for a time, “speed” the number for a speed. When we want to calculate the final answer we replace each of those "variables" with the actual number. When calculating the distance and we want an actual number for the distance, we need to know the speed and time first. If we know the speed and time first, we first multiply the numbers on the right and then the “=” sign puts them in the “distance” variable. How do we know it is a variable? Most of the things we are going to work with in Python are going to be variables, except the few cases we will point out.
+
+\begin{exercise} \textbf{Exercise 2.1 – Declaring variables}
+In the shell, execute (type it then press enter) the following code:
+\begin{shell}
+ x = 3
+ print(x)
+ y = 4
+ print(y)
+ print(x+y)
+ x = y
+ print(y)
+ name = "Python"      #You can put your own name here
+ print(name)
+\end{shell}
+	
+Notice how the letter \icd{x} now stands for 3 and \icd{y} stands for 4 and you can do the things you can do to numbers to x and y because x and y actually represent the numbers in the calculation.
+\end{exercise}
+
+\begin{example}\label{example:hands} \textbf{Look, no hands!}
+Here is another way to understand variables in Python. Let us say each of your hands is a variable. Your hands can only hold one thing at a time and you have 5 pens of different colors in front of you. Pretend you are a computer, meaning you follow instructions exactly without thinking about it and explain what happens in the following cases (The answers are as simple as you think!)
+\begin{enumerate}[label=\alph*]
+\item I put (assign) a black pen in your right hand and ask you to write your name.\\
+\item I put a red pen in your left hand and ask you to write the date\\
+\item If your hands are empty what goes wrong if I ask you to write the time?\\
+\item Now let's say you have 3 hands (left, middle and right). What if you have you have a black pen in your right hand, a red pen in your left hand and I ask you to put the black pen in the left hand and red pen in your right hand? You can use your middle hand but you can only have one pen in a hand at a time.
+\end{enumerate}
+\end{example}
+
+\begin{exercise} \textbf{Python Siri}
+\begin{enumerate}[label=\alph*]
+\item Now that we can code, we want to make our own  simple version of iPhone’s Siri that can greet someone by their name. Write a script that asks
+for the user’s name using \textbf{input()} and then asks for the age and then prints out a greeting that says “Hi, [name], you are [age] years old” where [name] is replaced by the person’s name and [age] is replaced by the person’s age. Think about what variables you can use and how you would name them.
+\item Write a script that exchanges the values of two variables \icd{x} and \icd{y}. Think about the demonstration you saw/did and how you would do it in the demonstration and do it in code using only three
+lines. (Hint: You can use as many variables as you want)
+\end{enumerate}
+\end{exercise}
+
+\section{Rules for naming variables}
+
+You may have noticed how much freedom we have when naming variables, this allows us to be able to make smart decisions about how we name them. If you have a long script with lots of variables, you want to be able to know what that variable is easily instead of all your variables being x or y. Here are some rules for naming variables, the first 5 rules are not optional, you will get errors if you do them wrong.
+
+\begin{enumerate}
+\item Never use python keywords (e.g. \icd{print}, \icd{def}, \icd{import} etc.) Basically, if the word changes colour when you type it, do not use it as a variable.
+\item Do not use the name of a module you have imported (e.g. math). If you import something, its name has been taken, you should not use it for a variable.
+\item Do not use any punctuation except underscores ({\_}) in your variable names.
+\item Do not use spaces in your variables, if you want to have a space, use an underscore ({\_}) e.g. two{\_}words.
+\item Your variable name should never start with a number (e.g. \icd{1st{\_}variable}).
+\item Give your variables names that anyone can understand (e.g. \icd{name}, \icd{age}, \icd{number{\_}of{\_}cats}).
+\item If your variable is going to be changing, use only lower case letters e.g. \icd{cost{\_}of{\_}food}.
+\item If your variable is just a value that you input once at the beginning of the document use all upper case letters e.g. \icd{NUM{\_} WHEELS{\_}{ON}{\_}{CAR}}.
+\end{enumerate}
+
+\section{Python keywords and Comments}
+
+Python has special words that mean special things, you can always see a keyword by the way it changes colour when you type it in e.g. \icd{if}, \icd{import}, \icd{elif}, \icd{print} etc. These should never be used as variable names.
+
+We say Python is human readable but sometimes our code gets complicated and someone who did not write the code might want to understand what it does. The person who writes the code can write comments to explain what is going on. Comments always start with the pound sign (aka hashtag) symbol (\#). Anything written on the same line in a different colour after the \# is ignored by Python, so you can write anything you want. Usually they are used to explain steps. You are encouraged to
+always write your own comments to explain what you are doing, even to yourself. Here is an example where comments are used:
+
+\begin{script}
+x = 1         #Declare a variable x as 1
+x += 1        #Add 1 to x
+print(x)      #Print the new x
+\end{script}
+
+\section{Syntax and Semantics}
+
+So you have been typing code and you have probably run into errors already, for now all the errors you have come across are “syntax” errors. Syntax has to do with rules of a language, things like grammar, spelling and punctuation are the syntax of the English language. Similarly in Python, every bit of code that you type must follow the syntax of Python otherwise you will get a syntax error like the one below when you forget to close the round bracket.
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Another type of error is what is called a semantic error, this is an error where your code runs but it does not do what you want it to, for example if you want to add two numbers but Python subtracts them instead. Another example is when you say or write something in English but it does not mean what you think it means even though it is spelled and punctuated correctly. These errors are very dangerous because Python will not tell you that your code is wrong, so you have to test your code and if it has problems, you “debug” it. Debugging means fixing code that does not work properly.
+
+\begin{toolbox} \textbf{The basics}
+\begin{enumerate}
+\item Variables
+\item Comments
+\item Coding vocabulary (syntax, semantics, debugging)
+\end{enumerate}
+\end{toolbox}
+
+
+%\chapter{Introduction to Computers and Programming}
+
+%\section{Paragraphs of Text}\index{Paragraphs of Text}
+%Blah blah blah
+%
+%%------------------------------------------------
+%
+%\section{Citation}\index{Citation}
+%
+%This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+%
+%%------------------------------------------------
+%
+%\section{Lists}\index{Lists}
+%
+%Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+%
+%\subsection{Numbered List}\index{Lists!Numbered List}
+%
+%\begin{enumerate}
+%\item The first item
+%\item The second item
+%\item The third item
+%\end{enumerate}
+%
+%\subsection{Bullet Points}\index{Lists!Bullet Points}
+%
+%\begin{itemize}
+%\item The first item
+%\item The second item
+%\item The third item
+%\end{itemize}
+%
+%\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+%
+%\begin{description}
+%\item[Name] Description
+%\item[Word] Definition
+%\item[Comment] Elaboration
+%\end{description}
+%
+%\section{Theorems}\index{Theorems}
+%
+%This is an example of theorems.
+%
+%\subsection{Several equations}\index{Theorems!Several Equations}
+%This is a theorem consisting of several equations.
+%
+%\begin{theorem}[Name of the theorem]
+%In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
+%\begin{align}
+%& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+%&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+%\end{align}
+%\end{theorem}
+%
+%\subsection{Single Line}\index{Theorems!Single Line}
+%This is a theorem consisting of just one line.
+%
+%\begin{theorem}
+%A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+%\end{theorem}
+%
+%%------------------------------------------------
+%
+%\section{Definitions}\index{Definitions}
+%
+%This is an example of a definition. A definition could be mathematical or it could define a concept.
+%
+%\begin{definition}[Definition name]
+%Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
+%\begin{align}
+%& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
+%& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
+%& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
+%\end{align}
+%\end{definition}
+%
+%%------------------------------------------------
+%
+%\section{Notations}\index{Notations}
+%
+%\begin{notation}
+%Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
+%\begin{enumerate}
+%\item Bounded support $G$;
+%\item Infinitely differentiable;
+%\end{enumerate}
+%a vector space is denoted by $\mathcal{D}(G)$. 
+%\end{notation}
+%
+%%------------------------------------------------
+%
+%\section{Remarks}\index{Remarks}
+%
+%This is an example of a remark.
+%
+%\begin{remark}
+%The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+%\end{remark}
+%
+%%------------------------------------------------
+%
+%\section{Corollaries}\index{Corollaries}
+%
+%This is an example of a corollary.
+%
+%\begin{corollary}[Corollary name]
+%The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+%\end{corollary}
+%
+%%------------------------------------------------
+%
+%\section{Propositions}\index{Propositions}
+%
+%This is an example of propositions.
+%
+%\subsection{Several equations}\index{Propositions!Several Equations}
+%
+%\begin{proposition}[Proposition name]
+%It has the properties:
+%\begin{align}
+%& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+%&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+%\end{align}
+%\end{proposition}
+%
+%\subsection{Single Line}\index{Propositions!Single Line}
+%
+%\begin{proposition} 
+%Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
+%\end{proposition}
+%
+%%------------------------------------------------
+%
+%\section{Examples}\index{Examples}
+%
+%This is an example of examples.
+%
+%\subsection{Equation and Text}\index{Examples!Equation and Text}
+%
+%\begin{example}
+%Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+%\begin{equation}
+%f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+%& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+%\end{equation}
+%The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+%\end{example}
+%
+%\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
+%
+%\begin{example}[Example name]
+%\lipsum[2]
+%\end{example}
+%
+%%------------------------------------------------
+%
+%\section{Exercises}\index{Exercises}
+%
+%This is an example of an exercise.
+%
+%\begin{exercise}
+%This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
+%\end{exercise}
+%
+%%------------------------------------------------
+%
+%\section{Problems}\index{Problems}
+%
+%\begin{problem}
+%What is the average airspeed velocity of an unladen swallow?
+%\end{problem}
+%
+%%------------------------------------------------
+%
+%\section{Vocabulary}\index{Vocabulary}
+%
+%Define a word to improve a students' vocabulary.
+%%
+%%\begin{vocabulary}[Word]
+%%Definition of word.
+%%\end{vocabulary}
+%%
+%%\section{Figure}\index{Figure}
+%%
+%%\begin{figure}[h]
+%%\centering\includegraphics[scale=0.5]{placeholder.jpg}
+%%\caption{Figure caption}
+%%\label{fig:placeholder} % Unique label used for referencing the figure in-text
+%%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+%%\end{figure}
+%
+%Referencing Figure \ref{fig:placeholder} in-text automatically.
+%
+%\section{Table}\index{Table}
+%
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{l l l}
+%\toprule
+%\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+%\midrule
+%Treatment 1 & 0.0003262 & 0.562 \\
+%Treatment 2 & 0.0015681 & 0.910 \\
+%Treatment 3 & 0.0009271 & 0.296 \\
+%\bottomrule
+%\end{tabular}
+%\caption{Table caption}
+%\label{tab:example} % Unique label used for referencing the table in-text
+%\addcontentsline{toc}{table}{Table \ref{tab:example}} % Uncomment to add the table to the table of contents
+%\end{table}
+%
+%\section{Code}
+%
+%If code is in a file you can use
+%
+%%\inputminted{python}{Introduction/code.py}
+%
+%Note that the path must be relative to the main.tex directory\\
+%\newline
+%For one line code
+%
+%\mint{html}|<h2>Something <b>here</b></h2>|
+%
+%For a python script
+%
+%\begin{script}
+%def f():
+%	return True
+%\end{script}
+%
+%For a python shell
+%
+%\begin{shell}
+%'1' in '4521'
+%\end{shell}
+%
+%For a cmd prompt
+%
+%\begin{cmd}
+%dir
+%cd
+%cd ..
+%\end{cmd}
