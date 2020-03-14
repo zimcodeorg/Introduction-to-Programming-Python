@@ -7,4 +7,5 @@
 *.toc
 *.bcf
 *.synctex.gz
+*.ind
 _minted-main/
