@@ -42,13 +42,14 @@ The variable num_guesses is an int
 -----------------------------------------becomes
 The variable \icd{num_guesses} is an \icd{int}
 ========================================================================
-Toolboxes
+Toolboxes, empty line after \begin{toolbox} is important
 ==========================================================================
 Toolbox 2.3: Screwdrivers
 1. Flat
 2. Phillips
 -----------------------------------------becomes
 \begin{toolbox} \textbf{Screwdrivers}
+
 \begin{enumerate}
 \item Flat
 \item Phillips
@@ -69,7 +70,7 @@ If it is numbered i) ii) ... replace label=\roman*
 \item print f
 \end{enumerate}
 ========================================================================
-Exercises
+Exercises, empty line after \begin{exercise} is important
 ==========================================================================
 Exercise 2.3: Variables
 
@@ -77,10 +78,11 @@ Declare a variable x
 
 -----------------------------------------becomes
 \begin{exercise} \textbf{Variables}
+
 Declare a variable x
 \end{exercise}
 ========================================================================
-Examples
+Examples, empty line after \begin{example} is important
 ==========================================================================
 Example 2.3: How to fly
 
@@ -88,6 +90,7 @@ Fly me to the moon
 
 -----------------------------------------becomes
 \begin{example} \textbf{How to fly}
+
 Fly me to the moon
 \end{example}
 ========================================================================
