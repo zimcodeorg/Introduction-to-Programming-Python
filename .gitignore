@@ -1,0 +1,10 @@
+*.aux
+*.log
+*.bbl
+*.idx
+*.ptc
+*.run.xml
+*.toc
+*.bcf
+*.synctex.gz
+_minted-main/
