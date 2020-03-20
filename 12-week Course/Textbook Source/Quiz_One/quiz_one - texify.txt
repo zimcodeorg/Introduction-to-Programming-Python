@@ -1,0 +1,99 @@
+\section{Section A Quiz}
+
+This is a sample quiz designed to give you a chance to test your understand thus far and apply your newly acquired skills. For optimum results, attempt the quiz in an exam environment and follow the recommended instructions given.
+
+\subsection{Part A: Short Questions}
+
+\textbf{Recommended instructions: Don't use a computer for Part A. Complete Part A before moving on to Part B.}
+
+\begin{enumerate}
+\item Fill in the gaps in the following paragraph:
+A computer takes an _______________, processes it and gives an ________________. A user can interact with the computer using a Graphical User ___________________(GUI) or Command Line _________________(CLI). Programming is teaching the computer how to process information, it is done in a specific programming __________________ that both a programmer and computer can understand.
+
+\item	What are the following data types? If it is not a data type, write ERROR:
+\begin{enumerate}[label=\alph*]
+\item 5.6	
+\item ‘Apple’	
+\item 3	
+\item 4 > 2	
+\item ‘1.2’	
+\item ‘ear’ ==  ‘ears’	
+\item π (This is pi for calculating area of a circle)	
+\item true	
+\item None	
+\item What do the following lines print in python the shell? If it gives an error, write ERROR and the type of error it is.
+\item Print(“Hello”)	
+\item print(3)	
+\item print(‘3’)	
+\item print(example)	
+\item print(‘Python is so cool’	
+\item dir	
+\end{enumerate}
+
+\item Evaluate the following expressions and give the answer exactly the way the shell would. If it gives an error write ERROR and the type of error it is.
+\begin{enumerate}[label=\alph*]
+\item 5%3	
+\item 4/2	
+\item 9//5	
+\item 4%1+6*1	
+\item 5 == 5	
+\item 4 < 3	
+\item ‘3’ == ‘   3   ‘	
+\item 12 >= 13	
+\item 24 == 24.000000000000001	
+\item (4 > 3) != True	
+\end{enumerate}
+
+
+\item What is the final value AND type of x in the following code? If it gives an error, write ERROR and the type of error it is.
+\begin{enumerate}[label=\alph*]
+\item	
+x = 3
+y = 2
+x = y	
+\item		
+x = ‘cat’
+y = 2
+y = x	
+\end{enumerate}
+
+
+\subsection{Part B: Coding Questions}
+
+\textbf{Recommended instructions: For the following questions, you can use a script/shell to test your code.}
+
+\item Let x = 2 and y = 1, write a piece of code that exchanges the values of x and y (Hint: you can use as many variables as you want)
+
+\item Define a function that prints the following:
+\begin{enumerate}[label=\alph*]
+\item The text “Python is so much fun” on the first line
+\item “5 * 4 = ” (Calculate the answer  and put it on the same line here) on the next line of output.
+\end{enumerate}
+
+\item  Python shell problem
+Use the shell as a calculator to find the answer to the following:
+(2*3%4)*((1.4//0.4) + (15 - 3)) = _______________________________________
+
+\item Python script problem
+You are going to write a script that asks the user their name, their birthyear and then greets them and tells them how many years ago they were born. Do not panic! It looks long but each step is very short. You do not need to define any functions.
+\begin{enumerate}[label=\alph*]
+\item Create a new script and name it with your first name, last name and school (Remember the rules for naming files) and save it on the desktop (C:/users/zimcode/Desktop).
+\item On the first line of your script write a comment with your name.
+\item Define/Declare a new variable called name and make it input from the user with the question “What is your name? ”.
+\item Define/Declare a new variable called birth_year and make it input from the user with the question “What is your birthyear? ”.
+\item Change the birth_year variable into a type you can use to calculate.
+\item Define/Declare a new variable called this_year and make it equal to 2016, make sure it is an integer.
+\item Define/Declare a new variable called years_ago and make it equal to: this_year – birth_year
+\item Convert/Cast years_ago into a type that you can use for concatenation.
+\item Make your script print the following statement on the same line, using concatenation or some other method e.g. If my name is Ben Bitdiddle and I was born in 2015 (1 year ago).
+
+\begin{shell}
+What is your name? Ben Bitdiddle 
+What is your birthyear? 2015
+Ben Bitdiddle was born 1 years ago
+
+\end{shell}
+
+\item Run your script to make sure it works.
+\end{enumerate}
+\end{enumerate}
