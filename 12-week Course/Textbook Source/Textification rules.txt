@@ -9,6 +9,7 @@ General Rules:
 try and turn them into examples.
 5. Treat all supplementary exercises as exercises
 6. Wrap all code, keywords and variable names and inline code in the \icd{} tag i.e. all of import, def, x, for, num_guesses etc. It will do the syntax highliting automatically
+7. This is code! So all commands are case sensitive and every time you open a bracker or command, it must be closed accordingly
 ========================================================================
 Footnotes
 Put the footnote text exactly where it appears in the main text, not where it appears in the document
