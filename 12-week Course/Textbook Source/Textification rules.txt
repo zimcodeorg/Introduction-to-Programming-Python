@@ -11,10 +11,11 @@ try and turn them into examples.
 6. Wrap all code, keywords and variable names and inline code in the \icd{} tag i.e. all of import, def, x, for, num_guesses etc. It will do the syntax highliting automatically
 ========================================================================
 Footnotes
+Put the footnote text exactly where it appears in the main text, not where it appears in the document
 ==========================================================================
-The text in the footnote is inside the parentheses. (This is the footnote)
+The text in the footnote is inside the parentheses. (This is the text of the footnote) Paragraph continues.
 -----------------------------------------becomes
-The text in the footnote is inside the parentheses. \footnote{This is the footnote}
+The text in the footnote is inside the parentheses. \footnote{This is the text of the footnote} Paragraph continues.
 
 ========================================================================
 Chapter Title
@@ -107,6 +108,7 @@ Any bulleted list do the following
 \end{itemize}
 ========================================================================
 Anything typed in the shell
+Do not number or use any command inside the shell that is not code
 ========================================================================
 >>> print(1)
 >>> print("x")         #Please retype " because word uses a different character
@@ -117,6 +119,7 @@ print("x")
 \end{shell}
 ========================================================================
 Anything typed in a script
+Do not number or use any command inside the script that is not code
 ========================================================================
 print(1)
 def P():
