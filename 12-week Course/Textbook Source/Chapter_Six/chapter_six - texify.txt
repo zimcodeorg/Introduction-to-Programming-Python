@@ -1,0 +1,381 @@
+\Chapter{Loops}
+
+\section{While Loops}
+
+Flow control gives Python the ability to make decisions. Now we need some way for Python to know how many times it should do something. Imagine that there is something you have to keep doing until something changes as in the examples below.
+
+\textbf{While} I am alive, breathe
+\textbf{While} the teacher is talking, listen
+\textbf{While} schools are open, go to school
+
+Here we are using what is called a \icd{while} loop. It basically means we want to do something over and over again until something changes or in Python language, conditional becomes \icd{False}. The syntax for a \icd{while} loop in Python is given below:
+
+\begin{script}
+\icd{while} conditional_is_True:
+	#Do this
+\end{script}
+
+As usual we have a colon at the end of the line with the while statement meaning we should indent the next line from the \icd{while} keyword for all the code that is within the \icd{while} loop. To add code outside the \icd{while} loop, we go back to the line with the \icd{while} statement.
+Let’s do an example and then explain how it works step by step.
+
+\begin{script}
+i = 0
+
+while i < 3:
+	print(i)
+	i += 1
+\end{script}
+
+Here is a workflow for how the above code works:
+
+\begin{itemize}
+\item Declare i = 0
+\item Check if i is less than 3, it is so move to the code block in the while loop
+\item print(0) then add 1 to i so i is now 1
+\item Go back and check if i is less than 3, it is so move to the code block in the while loop
+\item print(1) then add 1 to i so i is now 2
+\item Go back and check if i is less than 3, it is so move to the code block in the while loop
+\item print(2) then add 1 to i so i is now 3
+\item Go back and check if i is less than 3, it is not so break out of while loop and execute any code outside the loop
+\end{itemize}
+
+An important thing to notice is that we declared \icd{i} outside the \icd{while} loop. This should always be the case if you are incrementing/decreasing a variable in a \icd{while} loop otherwise \icd{i} will not be defined when it runs its first conditional test.
+
+A \icd{while} loop is best used when you do not know how many times you are going to do something just like the scenarios given at the beginning of the chapter. To give a code example, we are going to make a small game where the computer generates a random number between 1 and 100 and the user has to guess it. We will build each part step by step starting with the code that will test if a number is correct. This is the same idea as the one we used in the last chapter.
+
+\begin{script}
+import random
+number = random.randint(0,100)
+guess = input(“Guess the number:” )
+guess = int(guess)
+
+if guess == number:
+	print(“You guessed correctly!”)
+\end{script}
+
+The first two lines are used to produce a random integer. The first  line imports the random module, we have imported before. The second line uses the random.randint(a,b) function of the random module which produces a random integer between a and b. Don’t forget that we need to type cast the input to an integer as on line 4! Execute this code and see what it does.
+
+You may have realised that the above code is pretty bad. You only get one chanceand you have to keep running the code. Let’s implement a while loop which will make this game much more playable.
+
+\begin{script}
+import random
+number = random.randint(0,100)
+guess = input(“Guess the number:” )
+guess = int(guess)
+
+while guess != number:
+	guess = input(“Guess the number:” )
+guess = int(guess)
+
+print(“You guessed correctly!”)
+\end{script}
+
+Now this allows you to guess multiple times until you get the correct answer but if you’ve played you’ll realise that this game is actually very hard. It would be better if there were hints to tell you if your guess is too high or low. While we could use the previous code, we will choose to do this in a way that is good practice, and makes more sense when using while loops and it also shows you other ways in which we can use \icd{while} loops.
+
+\begin{script}
+import random
+number = random.randint(0,100)
+
+while True:
+	guess = input(“Guess the number:” )
+guess = int(guess)
+
+	if guess == number:
+		print(“You guessed correctly!”)
+		break
+	elif guess < number:
+		print(“Your guess is too low.”)
+	else:
+		print(“Your guess is too high”)
+\end{script}
+
+This is now much easier to play. Here the conditional for the \icd{while} loop is True, this means the while loop will be executed forever as the conditional is always \icd{True} unless we have a break statement inside the while loop. This is another Python keyword that is the same as making the \icd{while} loop \icd{False} and “breaking” out of it. This is a very useful keyword when working with \icd{while} loops.
+
+There are a couple of reasons why I claim this is better code. For one, notice that we are not writing the code to get input from the user twice.  Secondly, the three different cases are clear from the use of the \icd{if} statements. Thirdly, the use of the \icd{break} statement means with only one line of code, we can control the \icd{while} loop.
+
+Let’s implement a few more features to our code, for example let’s make it tell us how many guesses it took to get the right answer. Also we will put all this code into a function as usual and include comments.
+
+\begin{script}
+def guessing_game():
+	’’’
+	This is a number guessing game where the user guesses a random                
+	number between 0 and 100
+’’’
+
+import random
+number = random.randint(0,100)  	#Get a random integer 
+	num_guesses = 0
+
+while True:
+		guess = input(“Guess the number:” )
+     	guess = int(guess)
+	num_guesses += 1
+
+		if guess == number:
+			print(“You guessed correctly!”)
+			print(“It took you”,num_guesses,”guesses”)
+			break
+		elif guess < number:
+			print(“Your guess is too low.”)
+		else:
+			print(“Your guess is too high”)
+\end{script}
+
+Play this game a few times and challenge your friends to see who can guess the number with the fewest guesses. How can you play this game so that you make sure that you always get the answer in less than 8 guesses?
+
+\begin{exercise} \textbf{While I have time}
+\begin{enumerate}[label=\alph*]
+\item Write a script that prints the words “Disaster!” while 1 < 17. What happens and why? (To make it stop, press Ctrl + C in the shell)
+\item Write a script that prints the number x while x < 10 where x is initially 1. Remember where you have to declare your variables and how you make sure that one is added everytime the loop runs.
+\item Write a script that asks the user if they want to stop running the script, if they want it to stop, they type in yes and it stops otherwise if they type in something else, it just keeps asking. e.g:
+\begin{shell}
+Do you want to stop?:  no
+Do you want to stop?:  hai
+Do you want to stop?:  kwete
+Do you want to stop?:  okay
+Do you want to stop?:  yes
+
+\end{shell}
+\end{enumerate}
+\end{exercise}
+ 
+\section{For Loops and iteration}
+
+We use \icd{while} loops when we want to do something until a condition becomes \icd{False}, in fact that’s the only thing we need to loop but sometimes a \icd{while} loop makes things complicated and in larger programs it is slow and inefficient. One important situation is when you know exactly how many times you want to do something to everything in a certain number of things, to make this clear consider the following real life examples:
+
+\begin{itemize}
+\item \textbf{for} every homework I have out of many homeworks, I will do it.
+\item \textbf{for} every item in my bag, I will take it out.
+\item \textbf{for} every chance I get out of many chances, I will try and score.
+\item \textbf{for} every Saturday of the week, I will sleep late.
+\end{itemize}
+
+Notice how we have phrased the situations, we always do an action (e.g. take it out) to one thing (item) out of many things (Items in the bag). This is called iteration. Iteration is doing the same thing over and over. In this case we are doing the same thing over and over to all the things inside an “iterable” (something that contains many things).
+
+\begin{exercise} \textbf{Iterate on iteration}
+Pick an object around you (anything! a person, a bag, a table) and iterate any action (reasonable action) you want over it, try and phrase it the way the examples above are phrased.
+\end{exercise}
+
+Below is the syntax for a \icd{for} loop:
+
+\begin{script}
+\icd{for} item in many_items:
+	#Do something
+\end{script}
+
+\icd{for} and \icd{in} are Python keywords, the line with a for loop ends with a colon so the next line is indented and to write code outside the loop, we go back to the line with for (you should be understanding this by now!).
+
+\icd{item} is a variable that you do not declare beforehand, that first line is the declaration of the variable \icd{item}. If you want to do something to the items in \icd{many_items}, this is the variable you use to refer to the item.
+
+\icd{many_items }is an iterable which can be stored in a variable declared before the for loop, the only iterable you have learned so far are strings, strings are iterables because they are made up of many letters/characters. Integers, floats and booleans are not iterables!
+
+Below is an example which might give you a better idea:
+
+\begin{script}
+\icd{for} char in “hello”:
+	print(char)
+\end{script}
+
+Notice that it takes every character in the string “hello” and prints it i.e. for every character in the string, print the character on a new line.
+
+\begin{exercise} \textbf{Everyone up goes down, everyone down goes up}
+\begin{enumerate}[label=\alph*]
+\item Define a function that takes a string as input and prints every letter of the string in upper case on a new line.  e.g. if the input is ‘Atm’, the output should be:
+
+\begin{shell}
+’A’
+’T’
+’M’
+\end{shell}
+
+\item Modify your code from a) so that the function changes the case of the letter before it prints i.e. if it is lowercase, make it upper case, if it is upper case, make it lower case e.g. for ‘Atm’
+\begin{shell}
+‘a’
+‘T’
+‘M’
+\end{shell}
+\end{enumerate}
+\end{exercise}
+
+Now we can iterate over strings, let’s introduce to another iterable called a range. A range gives you asset of  numbers that follow a pattern e.g. the range from 0 to 5 with a spacing of 1 gives me the following numbers: [0, 1, 2, 3, 4]. Notice that the last number of the specified range “5” is not included. We create a range using the inbuilt function range(). The range I just gave is created by calling range(5) The syntax of range is given below:
+
+\[ range(start, stop, step) \]
+
+#start -> the first number of the range (float but if stop is not #given it must be an integer)
+#stop -> the number after the last one in the range (float, optional)
+#step -> the spacing between numbers in the range (float, optional)
+
+More examples of range are given below:
+
+\begin{table}[]
+\begin{tabular}{ll}
+\textbf{Function Call}                & \textbf{Range}                  \\
+range(4)                              & 0, 1, 2, 3                      \\
+range(2, 9)                           & 2, 3, 4, 5, 6, 7, 8             \\
+range(2, 10, 2)                       & 2, 4, 6, 8                      \\
+range(0.4, 1.8, 0.2)                  & 0.6, 0.8, 1.0, 1.2, 1.4, 1.6    \\
+range(0, 50000, 10)                   & 0,10,20,30, ………. , 49980, 49990 \\
+range(-2*math.pi, 2*math.pi, math.pi) & -2π,- π,0, π                   
+\end{tabular}
+\end{table}
+
+When we use it in a \icd{for} loop we do the following:
+
+\begin{script}
+for i in range(4):
+	print(i)
+\end{script}
+
+You may have noticed that the \icd{for} loop prints all the numbers in the range we specify. We can use these numbers stored in the variable \icd{i} however we want. The following example adds  all the  numbers from 1 to 5. Work it out by hand by first writing out the range like in the table and adding all the numbers together.
+
+\begin{script}
+sum = 0
+
+for i in range(6):
+	sum += i
+
+print(sum)
+\end{script}
+
+Notice that we have to declare the variable sum outside the \icd{for} loop. Why? Try declaring sum inside the \icd{for} loop and see what happens. 
+This example adds all the even numbers from 10 to 100:
+
+\begin{script}
+sum = 0
+
+for i in range(10,102,2):
+	sum += i
+
+print(sum)
+\end{script}
+
+We can use string indices (plural fo index) to iterate over a string, this is actually more common in other languages, Python is nice in that we can iterate over a string without using an index. The following script makes a new string with word “loops” from \icd{my_str}. 
+
+\begin{script}
+my_str = ‘for loops are cool’
+loops_str = ‘’	#Try without this line and see what #happens
+
+for i in range(4,8):		#Think about why we use this range
+	loops_str += my_str(i)
+
+print(loops_str)
+\end{script}
+
+\begin{exercise} \textbf{Loop for loops}
+\begin{enumerate}[label=\alph*]
+\item Print the number 34, 34.5, 35, 35.5, ……40 using a for loop.
+\item Print the letters of the string ‘I heart loops’ one by one without indexing.
+\item Repeat b) using indexing. Print just the word loops from the string in b) using indexing. Remember the function length().
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \textbf{Mathematics: Arithmetic and Geometric Series}
+\begin{enumerate}[label=\alph*]
+\item An arithmetic series is a sequence of numbers starting from a with a spacing of d e.g. if a is 1 and d is 3, the series is 1,4,7,10,…… , the formula for the nth term is given by:
+
+\[ T_n=a+(n-1)d \]
+  
+The sum of the series(SN) to the nth term is the result when you add all the first n numbers of the sequence so:
+
+\[ S_N= ∑_(n=1)^N▒T_n \]
+
+for the example I gave, the sum up to the 5th term is:
+
+\[ S_5= ∑_(n=1)^5▒〖T_n  =〗  1+4+7+10+13 = 35 \]
+
+Write a script that finds the sum of an arithmetic series with a = 12, N = 100 and d = 3 using a for loop, to check your answer use the formula for the sum up to N which is:
+
+\[ S_N=N/2(2a+(N-1)d) \]
+
+\item A geometric series on the other hand is a sequence made by multiplying the first number of the series a by a constant r n-1 times, so:
+\[ U_n=a*r^(n-1) \]   
+e.g if a is 1 and r is 2, the geometric series is 1,2,4,8,16,……. The sum of this series is:
+
+\[ S_N= ∑_(n=1)^N▒〖U_n=〖a*r〗^1+〖a*r〗^2+〖a*r〗^3+⋯+〖a*r〗^(N-1) 〗\]
+
+so for our example:
+
+\[ S_4= ∑_(n=1)^4▒〖U_n=2^0+2^1+2^2+2^3=15〗\]
+
+Write a script that finds the sum (SN) up to the 5th, 10th ,50th, 1000th and 10000th term of the series with a = 1 and r = 0.5. Try it with any r less than 1, what do you notice about about the sums when N is very large. Use the following formula to check your answers:
+
+\[ S_N=  ((1-r^N))/(1-r) \]
+
+Imagine if you had to do the sum by hand!
+\end{enumerate}
+\end{exercise}
+
+An important use of a for loop is for counting the number of times to do something, for example, if I want to print “Hello” 5 times, I can use the following code:
+
+\begin{script}
+for i in range(5):
+	print(“Hello”)
+\end{script}
+
+We will now do an interesting example where we will draw shapes using the computer using a module called turtle graphics which comes with Python 3.5. This package is not builtin so we will have to use the import keyword The package has the following functions, taken from the documentation, which is important to learn how to read!
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} 
+% Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+ 
+If you’ve never seen documentation before, you should be amazed at how straight forward and clear good documentation is to read. These are the three functions we will use for now, how would you use these to draw a square?
+
+Here is some code that will do it:
+
+\begin{script}
+import turtle
+
+turtle.fd(100)
+turtle.right(90)
+turtle.fd(100)
+turtle.right(90)
+turtle.fd(100)
+turtle.right(90)
+turtle.fd(100)
+turtle.right(90)
+\end{script}
+
+If you remember our golden rule when we were talking about functions, you will realise that this is terrible coding, we’re typing the same code over and over again! A more clever way to do this is to use a \icd{for} loop. Whenever you do the same action over and over again for a certain number of times (that you know), you are iterating and you MUST use a \icd{for} loop. Here is a better script:
+
+\begin{script}
+import turtle
+
+for i in range(4):
+	turtle.fd(100)
+turtle.left(90)
+\end{script}
+
+\begin{exercise} \textbf{How turtles get in shape}
+\begin{enumerate}[label=\alph*]
+\item Use the turtle module to draw a rectangle of sides 200x300.
+\item Use the turtle module and a for  loop to draw an equilateral triangle and a hexagon of side 250. What are the exterior angles of an equilateral triangle and a hexagon?
+\item Given that turtle.right() is a function, can you guess another function that probably exists? You can type in:
+\begin{shell}
+import turtle
+help(turtle.FUNCTION)
+\end{shell}
+
+where \textbf{FUNCTION} is replaced by what you think is the function name to see if it exists and what it does. It turns out this works a lot of the time! You can guess the name of a function that probably exists, and google it or use the help function to see how it works.
+
+\item (Supplementary) Use help() or Go to the turtle documentation (In IDLE, go to help>Python Docs >Search then type in turtle and choose the first option on the list) and lookup how to use the turtle.circle() and turtle.setpos(), turtle.penup(), turtle.pendown() from the list, if you have internet you can google the functions directly) . Draw the camera below, choose your own measurements (Hint: The canvas (white space) is like a cartesian plan with an origin (0,0) at the centre)
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder.jpg}
+\caption{Missing figure}
+\label{fig:placeholder} 
+% Unique label used for referencing the figure in-text
+%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
+\end{figure}
+\end{enumerate}
+\end{exercise}
+
+
+
+
+
+
+ 
